@@ -189,5 +189,10 @@ We define IDs with the `#` preceding the name:
 		border: none;
 	}
 ```
-### In Class Exercise CSS Specificity
+## In Class Examples
+
+* Layout using floats and clears
+* Layout using inline block
+* Horizontal Navbar
+* Vertical Navbar
 

@@ -1,6 +1,6 @@
 # Syllabus
 
-## Polytechnic School of Engineering of New York University
+## Tandon School of Engineering of New York University
 
 ### Technology, Culture and Society
 ### Integrated Digital Media

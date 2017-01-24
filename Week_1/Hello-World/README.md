@@ -162,7 +162,7 @@ Every week, you will be commiting files and folders to your HW repo, and pushing
   
 ____________
 
-### What if we want to add an exisiting project from our local computer to a GitHub Repository?
+### Bonus: What if we want to add an exisiting project from our local computer to a GitHub Repository?
  
 * follow the instructions above to create a new online repository on GitHub.
 

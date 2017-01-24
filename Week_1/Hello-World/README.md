@@ -23,7 +23,7 @@
 
 
 * Wireframing Software – [Balsamiq](https://balsamiq.com/)
-* Design and Graphics – [Adobe Creative Cloud (Photoshop)](http://www.adobe.com/creativecloud/buy/students.html?promoid=65FN7X8B&mv=other) **NYU Poly has a discount plan for Students.**
+* Design and Graphics – [Adobe Creative Cloud (Photoshop)](http://www.adobe.com/creativecloud/buy/students.html?promoid=65FN7X8B&mv=other) **NYU Tandon School of Engineering has a discount plan for Students.**
 
 ### Git, Github, Class Files
 * Git is a widely used version control software which we can access via the command line of our computers. First, lets install Git on our computers.

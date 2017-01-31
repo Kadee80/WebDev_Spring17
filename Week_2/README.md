@@ -14,11 +14,11 @@ ___
 
 Our Tech Director, Elton Kwok, will be holding sessions to discuss registering for an IDM server account and server access. These sessions will be held on the following days from 1PM - 5PM in MAGNET room 811:
 
-Friday February 3, room 811 at MAGNET
-Friday February 10, room 811 at MAGNET
-Friday February 17, room 811 at MAGNET
-Friday February 24, room 811 at MAGNET
-Friday March 3, room 811 at MAGNET
+* Friday February 3, room 811 at MAGNET
+* Friday February 10, room 811 at MAGNET
+* Friday February 17, room 811 at MAGNET
+* Friday February 24, room 811 at MAGNET
+* Friday March 3, room 811 at MAGNET
 
 Also, please feel free to bring other IDM-related technical issues to discuss.
 

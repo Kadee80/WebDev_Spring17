@@ -4,7 +4,7 @@
 
 2. Read [this article](http://mediatemple.net/blog/tips/five-important-considerations-for-wireframing/?utm_source=weekly_newsletter&utm_medium=email&utm_campaign=aug17newsletter) on wireframing. Post a brief reaction on your blog. If your blog is not set up yet, push a .txt file to your week2 hw folder on your class repository.
 
-3. Using the recipe you marked up with HTML this week *(or a new one)* wireframe your desired layout for a single recipe page on your hypothetical recipe site. Think - rows, columns, sidebars, headers, footers etc. Be sure to mark up each block of content in your wireframe with a few HTML tags for practice.
+3. Using the recipe you uploaded last week *(or a new one)* wireframe your desired layout for a single recipe page on your hypothetical recipe site. Think - rows, columns, sidebars, headers, footers etc. Be sure to mark up each block of content in your wireframe with a few HTML tags for practice.
 
 4. Mark up your recipe in HTML semantically based on your wireframe. Bonus points for applying some basic font and color styles.
 

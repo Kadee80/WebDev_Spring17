@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Box Model</title>
+  <!-- Internal Style Sheet -->
+  <style type="text/css">
+    /* Use the universal selector to remove all of the default margins and padding from every element on the page so we can write our own from scratch */
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+    /* 
+    TAG SELECTOR
+    Applying styles to the body tag will trickle down to all child elements on the page unless they are overwritten by a more specific tag.
+    */
+    body{
+      /* background-color: black; */
+      font-family:"Helvetica Neue", Arial, sans-serif;
+      color: #555555;
+      /* font-style: italic; */
+    }
+
+    /* First, lets use a tag selector to apply a background color to every div on our page so we can see how our layouts nests and develops */
+    div{
+      background-color: rgba(0,0,200,.2);
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+
+<div><p>Here is some font to render</p></div>
+
+</body>
+</html>

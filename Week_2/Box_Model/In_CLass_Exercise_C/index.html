@@ -4,32 +4,89 @@
 <head>
     <title>Box Model 101</title>
     <!-- Based on the classes we have applied to our container and thumbnail divs, today we will explore how margins, padding, and borders effect the dimensions of our block level elements in both pixel and percentage based grid systems. -->
+    <style type="text/css">
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #777777;
+            font-style: italic;
+        }
+        h2{
+            text-transform: uppercase;
+        }
+        /* Use a tag selector to add a transparent backgrounf to all divs on our page so we can see them. */
+        div{
+            background-color: rgba(0, 0, 200, 0.2);
+        }
+        /* Fixed width container and grid using pixels */
+        .container{
+            /* starter width in pixels, divs display block by default */
+            width: 900px;
+            margin: 0px auto;
+            /* padding adds to the width dimension of our element. our 900px container now takes up 940px of the screen */
+            padding: 20px;
+
+        }
+
+        .thumbnail{
+            width: 300px;
+            height: 300px;
+            float:left;
+        }
+
+        /* How to clear-fix aka avoid collapsed paren element when floating child elements */
+
+        /* Solution 1 -  add an element after our last floated element with clear both and no height - This is less good! we are using HTML (content) to control our presentation which should be handled by CSS alone */
+        .clear{
+            clear: both;
+        }
+
+        /* Solution 2- Using CSS alone and a clearfix class which we apply to any element who has floating children */
+
+        .clear-fix::after{
+            content: '';
+            display: block;
+            clear: both;
+            /* for backwards compatibility */
+            height: 0;
+            font-size: 0;
+            /* extra backup */
+            visibility: hidden;
+        }
+
+        
+    </style>
 </head>
 
 <body>
     <!-- Notice our heading are block elements too -->
     <h1>Box Model, Basic Layouts, Positioning</h1>
-    <h2>Fixed Pixel Based Layout Using Floats and Clear Both Element</h2>
-<div class="container">
-  <div class="thumbnail"></div>
-  <div class="thumbnail"></div>
-  <div class="thumbnail"></div>
-  <br class="clear">
-</div>
 
-<h2>Fixed Pixel Based Layout Using Floats and ClearFix Class</h2>
+    <h2>Fixed Pixel Based Layout Using Floats and Clear Both Element</h2>
+    
+    <div class="container">
+        <div class="thumbnail"></div>
+        <div class="thumbnail"></div>
+        <div class="thumbnail"></div>
+        <br class="clear">
+    </div>
+
+    <h2>Fixed Pixel Based Layout Using Floats and ClearFix Class</h2>
     <div class="container clear-fix">
         <div class="thumbnail"></div>
         <div class="thumbnail"></div>
         <div class="thumbnail"></div>
     </div>
+
     <h2>Fluid Percentage Based Layout Using Floats</h2>
+    
     <div class="container-fluid clear-fix">
         <div class="thumbnail-fluid"></div>
         <div class="thumbnail-fluid"></div>
         <div class="thumbnail-fluid"></div>
         <div class="thumbnail-fluid"></div>
     </div>
+
     <h2>Fixed Container with Fluid Thumbnails Within</h2>
     <!-- Notice how our % based thumbnails just figured out thier final dimension based on a fixed container -->
     <div class="container clear-fix">
@@ -49,13 +106,13 @@
 
     <h3>More Math to Modify Our Pixel based layout to account for Borders and Padding</h3>
     <div class="container clear-fix">
-        <div class="thumbnail-border-padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit sit amet purus at iaculis. Morbi lorem metus, facilisis fermentum metus id, tincidunt ullamcorper augue. Cras tortor dolor, varius ac mi eu, mattis sodales sapien. Proin faucibus pellentesque dignissim.  </div>
+        <div class="thumbnail-border-padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit sit amet purus at iaculis. Morbi lorem metus, facilisis fermentum metus id, tincidunt ullamcorper augue. Cras tortor dolor, varius ac mi eu, mattis sodales sapien. Proin faucibus pellentesque dignissim. </div>
         <div class="thumbnail-border-padding">Fusce euismod nisl at dui venenatis, a fermentum quam tristique. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut nec velit nec tortor eleifend pretium.</div>
         <div class="thumbnail-border-padding">
-          Vestibulum id urna facilisis, aliquam lacus eget, euismod lorem. Proin et sollicitudin purus. Sed euismod erat a posuere viverra. Aliquam interdum dolor a risus scelerisque fermentum eget congue nulla. Duis in lectus.
+            Vestibulum id urna facilisis, aliquam lacus eget, euismod lorem. Proin et sollicitudin purus. Sed euismod erat a posuere viverra. Aliquam interdum dolor a risus scelerisque fermentum eget congue nulla. Duis in lectus.
         </div>
     </div>
-<hr>   
+    <hr>
     <h3>In Class Exercise</h3>
     <div class="container-inclass clear-fix">
         <div class="thumbnail-inclass"></div>

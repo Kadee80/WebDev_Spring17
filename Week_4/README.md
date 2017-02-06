@@ -1,7 +1,25 @@
-# HW - Due Monday, Week 4
+# HW - Due Monday, Week 5
 
-By now we should have gotten the hang of some simple git and GitHub terminal commands. By Monday of next week. Be sure to have posted folders with all HW assignments to this point to your HW repository. For example, HW assigned week1 should be posted to a Week_1/ folder in your repo.
+Next week you will be presenting you midterm project proposals to your classmates. Plan on showing a blog post and optional slideshow (or combination of the 2) describing a simple multipage (minimum of 3 pages) website. Blog post / slideshow should include:
 
-Once you have your server space set up, be sure to create a README.md file in each weeks folder and post a link to your blog documentation for the corresponding code you have pushed to that folder.
+* concept|theme of site (not just random images and links that show skill)
+* site map  and wireframes
+* an existing website you drew inspiration from (bonus points for pinterest collection or mood board)
+* concepts|skills we have covered that you will use to build your site
+* concepts|skills you need to still learn to complete the project
 
-This week we will build upon our recipe website/page. Using the entry level CSS we covered this week, mark up your recipe page (you should have a pure html markup already from last weeks assignment!) to have a header, footer, menu and side column. Play around with fonts, colors, margins, padding, floats, and any other CSS properties we have covered so far.
+## Examples
+These examples are from previous students that properly documented thier midterms and final projects. 
+
+[Example Midterm Proposal](http://sites.bxmc.poly.edu/~isabellaweaver/webdev/?p=9)
+
+[Example Midterm Documentation](https://samantascreations.com/2015/10/25/midterm-presentation/)
+
+### Here are a few useful resources to help with inspiration:
+
+* [UX Inspiration Source Article](http://mediatemple.net/blog/tips/top-seven-sites-for-ux-inspiration/?utm_source=weekly_newsletter&utm_medium=email&utm_content=kylie_img&utm_campaign=02092016_newsletter&j=50758766&e=katieadee@gmail.com&l=32460871_HTML&u=372480720&mid=10825691&jb=49)
+* [CSS Color Keywords Explained](http://www.w3schools.com/cssref/css_colors.asp)
+* [HTML Color Picker](http://www.w3schools.com/colors/colors_picker.asp)
+* [Paletton - Color Palette Tool](http://paletton.com)
+
+

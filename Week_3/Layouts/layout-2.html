@@ -26,9 +26,10 @@
         margin: 0 auto;
     }
     /* Adds block empty content with zero height that will clear out both sides avoiding our wrapping issues. Use this class for the container element  */
+    
     .clearfix:after {
         display: block;
-        clear: both; 
+        clear: both;
         /* To ensure cross browser and legacy compatibility */
         height: 0;
         font-size: 0;
@@ -41,15 +42,16 @@
     footer {
         width: 100%;
     }
-
     /* Descendant Selector for more CSS Specificity */
-    article.col-pixels section{
+    
+    article.col-pixels section {
         /* 960px container - 6*10px marigin / 3 */
         width: 300px;
         margin: 0 10px;
         float: left;
     }
-    article.col-fluid section{
+    
+    article.col-fluid section {
         /* 100% browser width - 8*2.5% marigin / 4 */
         width: 20%;
         margin: 2.5%;
@@ -76,20 +78,20 @@
         </article>
     </main>
     <!-- Fluid Layout using % -->
-        <h1>Article 2 - Percent Based, no wrapper</h1>
-        <p>note that this article is outside our main element - which has a set pixel width</p>
-        <article class="col-fluid clearfix">
-            <h2>Article with 4 fluid width vertical sections.</h2>
-            <section>
-                <h3>Section 1</h3></section>
-            <section>
-                <h3>Section 2</h3></section>
-            <section>
-                <h3>Section 3</h3></section>
-            <section>
-                <h3>Section 4</h3></section>
-        </article>
-        <!-- resize your browser to see the difference between the 2 layouts -->
+    <h1>Article 2 - Percent Based, no wrapper</h1>
+    <p>note that this article is outside our main element - which has a set pixel width</p>
+    <article class="col-fluid clearfix">
+        <h2>Article with 4 fluid width vertical sections.</h2>
+        <section>
+            <h3>Section 1</h3></section>
+        <section>
+            <h3>Section 2</h3></section>
+        <section>
+            <h3>Section 3</h3></section>
+        <section>
+            <h3>Section 4</h3></section>
+    </article>
+    <!-- resize your browser to see the difference between the 2 layouts -->
     <footer>
         <h3>Some footer text</h3></footer>
 </body>

@@ -1,88 +1,164 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Positioning</title>
-  <style type="text/css">
-    *{
-      margin: 0;
-      padding: 0;
+    <title>Positioning</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
     }
-
-    body{
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
+    body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
-
-    header{
-      background-color: #999;
-      height: 100px;
+    
+    header {
+        background-color: #999;
+        width: 100%;
+        height: 100px;
     }
     /* decendant selectors to only target h1 elements who have a parent element of header */
-    header h1{
-      color:  white;
-      display: inline-block;
-      max-width: 20%;
-      line-height:  100px;
-      overflow:  hidden;
+    
+    header h1 {
+        color: white;
+        display: inline-block;
+        max-width: 20%;
+        line-height: 100px;
+        overflow: hidden;
     }
-
     /* make a right side navigation using text align and inline block  */
-    header nav{
+    
+    header nav {
+        display: inline-block;
+        float: right;
+        height: 100px;
+        overflow: hidden;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        text-align: right;
+        line-height: 100px;
+    }
+    
+    nav ul li {
+        display: inline-block;
+        margin: auto -2px;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 0 20px;
+        color: white;
+        text-decoration: none;
+    }
+    
+    nav ul li a:hover {
+        background-color: black;
+    }
+    
+    p {
+        margin: 1em 0;
+    }
+    
+    .sticky-navbar {
+        position: fixed;
+    }
+    
+    main {
+        padding-top: 100px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    main article.featured-story{
+      width: 60%;
+      margin: 0 5%;
       display: inline-block;
-      float: right;
-      height:  100px;
-      overflow:  hidden;
     }
 
-    nav ul{
-      list-style-type: none;
-      text-align: right;
-      line-height: 100px;
-
-    }
-
-    nav ul li{
+    main aside.secondary-nav{
+      width: 20%;
+      margin: 0 2%;
       display: inline-block;
-      margin:  auto -2px;
     }
 
-    nav ul li a{
-      display: block;
-      padding: 0 20px;
-      color: white;
-      text-decoration: none;
-   }
-
-   nav ul li a:hover{
-    background-color: black;
-   }
-
-    p{
-      margin: 1em 0;
+    footer div{
+      min-width: 100px;
+      min-height: 100px;
+      border: 1px solid #555;
     }
 
-  </style>
+    #abs{
+      width: 100px;
+      background-color: red;
+      position: absolute;
+      bottom: 0px;
+      right: 10%;
+    }
+
+    #rel{
+      width: 100px;
+      background-color: green;
+      position: relative;
+      bottom: 80px;
+      left: 10%;
+    }
+
+    #abs-child{
+      width: 50px;
+      height: 50px;
+      background-color: purple;
+      position: absolute;
+      right: 0px;  
+    }
+
+    #rel-parent{
+      width: 700px;
+      height: 700px;
+      background-color: mediumaquamarine;
+      position:  relative;
+    }
+
+    </style>
 </head>
+
 <body>
+    <header class="sticky-navbar">
+        <h1>Website Title</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Website Title Outside Header</h1>
+        <article class="featured-story">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ligula tristique, egestas nibh eget, vulputate lectus. Etiam vehicula, augue at vulputate egestas, turpis lorem porttitor risus, tempor lacinia mauris urna vitae nisi. Nullam non vestibulum justo. Ut ut mollis lacus. Nam egestas rutrum urna, sit amet rhoncus sapien tempus non. Nunc tempus erat non bibendum placerat. Maecenas mollis urna justo, quis pharetra elit ornare id. Praesent ullamcorper consectetur leo. Maecenas fermentum arcu in eros faucibus, nec aliquam mi sollicitudin. Mauris pretium dui at dignissim vulputate. Phasellus eros nisi, porttitor in tellus ac, vehicula ornare sapien. Nullam congue bibendum erat, gravida sagittis tortor ultrices quis.</p>
+            <p>Quisque et ligula a purus consequat rutrum. Proin vehicula felis egestas tellus blandit interdum. Duis ac pulvinar lorem. Integer sed dolor id nulla fermentum blandit. Nunc augue odio, dictum vitae imperdiet ut, eleifend in elit. Nulla sagittis interdum dolor pulvinar vulputate. Cras vel massa ligula. Morbi vitae consectetur ante. Maecenas vestibulum ut nunc eget suscipit. Curabitur imperdiet lacinia erat et elementum. Cras ornare vitae velit ut eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent blandit nisl massa.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ligula tristique, egestas nibh eget, vulputate lectus. Etiam vehicula, augue at vulputate egestas, turpis lorem porttitor risus, tempor lacinia mauris urna vitae nisi. Nullam non vestibulum justo. Ut ut mollis lacus. Nam egestas rutrum urna, sit amet rhoncus sapien tempus non. Nunc tempus erat non bibendum placerat. Maecenas mollis urna justo, quis pharetra elit ornare id. Praesent ullamcorper consectetur leo. Maecenas fermentum arcu in eros faucibus, nec aliquam mi sollicitudin. Mauris pretium dui at dignissim vulputate. Phasellus eros nisi, porttitor in tellus ac, vehicula ornare sapien. Nullam congue bibendum erat, gravida sagittis tortor ultrices quis.</p>
+            <p>Quisque et ligula a purus consequat rutrum. Proin vehicula felis egestas tellus blandit interdum. Duis ac pulvinar lorem. Integer sed dolor id nulla fermentum blandit. Nunc augue odio, dictum vitae imperdiet ut, eleifend in elit. Nulla sagittis interdum dolor pulvinar vulputate. Cras vel massa ligula. Morbi vitae consectetur ante. Maecenas vestibulum ut nunc eget suscipit. Curabitur imperdiet lacinia erat et elementum. Cras ornare vitae velit ut eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent blandit nisl massa.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ligula tristique, egestas nibh eget, vulputate lectus. Etiam vehicula, augue at vulputate egestas, turpis lorem porttitor risus, tempor lacinia mauris urna vitae nisi. Nullam non vestibulum justo. Ut ut mollis lacus. Nam egestas rutrum urna, sit amet rhoncus sapien tempus non. Nunc tempus erat non bibendum placerat. Maecenas mollis urna justo, quis pharetra elit ornare id. Praesent ullamcorper consectetur leo. Maecenas fermentum arcu in eros faucibus, nec aliquam mi sollicitudin. Mauris pretium dui at dignissim vulputate. Phasellus eros nisi, porttitor in tellus ac, vehicula ornare sapien. Nullam congue bibendum erat, gravida sagittis tortor ultrices quis.</p>
+        </article>
+        <aside class="secondary-nav">
+            <p>Quisque et ligula a purus consequat rutrum. Proin vehicula felis egestas tellus blandit interdum. Duis ac pulvinar lorem. Integer sed dolor id nulla fermentum blandit. Nunc augue odio, dictum vitae imperdiet ut, eleifend in elit. Nulla sagittis interdum dolor pulvinar vulputate. Cras vel massa ligula. Morbi vitae consectetur ante. Maecenas vestibulum ut nunc eget suscipit. Curabitur imperdiet lacinia erat et elementum. Cras ornare vitae velit ut eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent blandit nisl massa.</p>
+        </aside>
+    </main>
 
-<header>
-  <h1>Website Title</h1>
-  <nav>
-    <ul>
-      <li><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
-      <li><a href="#">Link 3</a></li>
-    </ul>
-  </nav>
-</header>
+    <footer>
 
-<main>
-<h1>Website Title Outside Header</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ligula tristique, egestas nibh eget, vulputate lectus. Etiam vehicula, augue at vulputate egestas, turpis lorem porttitor risus, tempor lacinia mauris urna vitae nisi. Nullam non vestibulum justo. Ut ut mollis lacus. Nam egestas rutrum urna, sit amet rhoncus sapien tempus non. Nunc tempus erat non bibendum placerat. Maecenas mollis urna justo, quis pharetra elit ornare id. Praesent ullamcorper consectetur leo. Maecenas fermentum arcu in eros faucibus, nec aliquam mi sollicitudin. Mauris pretium dui at dignissim vulputate. Phasellus eros nisi, porttitor in tellus ac, vehicula ornare sapien. Nullam congue bibendum erat, gravida sagittis tortor ultrices quis.</p>
+      <div id="abs"></div>
+      <div id="rel"></div>
 
-<p>Quisque et ligula a purus consequat rutrum. Proin vehicula felis egestas tellus blandit interdum. Duis ac pulvinar lorem. Integer sed dolor id nulla fermentum blandit. Nunc augue odio, dictum vitae imperdiet ut, eleifend in elit. Nulla sagittis interdum dolor pulvinar vulputate. Cras vel massa ligula. Morbi vitae consectetur ante. Maecenas vestibulum ut nunc eget suscipit. Curabitur imperdiet lacinia erat et elementum. Cras ornare vitae velit ut eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent blandit nisl massa.</p>
-</main>
-<footer>
-  
-</footer>
+      <div id="rel-parent">
+        <div id="abs-child"></div>
+      </div>
+
+    </footer>
 </body>
+
 </html>

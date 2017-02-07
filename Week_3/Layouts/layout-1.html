@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Layout 1: header, footer, main and sidebar using pixels</title>
+	<!-- Enough with the style tag! Let's link to an external style sheet that we can reuse common styles across an entire site -->
+	<link rel="stylesheet" type="text/css" href="css/layout-1.css">
+	<style type="text/css">
+		/* transparent blue bg, and minimum height so we can keep track of our divs and semantic markup elements without having to add content. */
+		div, header, footer, section, aside, article, main{
+			min-height: 100px;
+			/* RGBA color, red, green, blue (0-255) and alpha (0-1) */
+			background-color: rgba(0,100,255,0.2)
+		}
+		div.wrapper{
+			width: 900px;
+			/* use margin 0 auto to center our wrapper div within the browser window */
+			margin: 0 auto;
+			/* add a little padding so we can see how child elements stack more clearly */
+			padding: 30px;
+		}
+		header, footer{
+			width: 100%;
+		}
+		/* Define these after adding to html! Notice the clear issue with floating! */
+		article{
+			width: 600px;
+			float: left;
+			/* option 2:  add some margins; */
+			/* 600-20-20=560px */
+			/* width: 560px;
+			margin: 0px 20px; */
+		}
+		aside{
+			width: 300px;
+			/* Define a height so we can see it better */
+			min-height: 424px ;
+			float: left;
+			/* option 2:  add some margins; */
+			/* 300-20-20=260px */
+			/* width: 260px;
+			margin: 0px 20px; */
+		}
+		/* use this to fix the container/wrapping float issues */
+		br.clear{
+			clear: both;
+			height: 0;
+		}
+	</style>
+</head>
+<body>
+<!-- Header, Main, Sidebar, Footer with pixels  -->
+<div class="wrapper">
+	<header>
+		A header element with width 100%. We will cover menu layouts in another example!
+	</header>
+	<main>
+		<h1>Main Content Section- heading elements display block!</h1>
+		<article>
+			<h2>Article with 3 sections.</h2>
+			<section><h3>Section 1</h3></section>
+			<section><h3>Section 2</h3></section>
+			<section><h3>Section 3</h3></section>
+		</article>
+		<aside><h2>Sidebar</h2></aside>
+		<!-- clear out so our wrapper div wraps around. we will discuss several clearfixes this week -->
+		<br class="clear"/>
+	</main>
+	<footer><h3>Some footer text</h3></footer>
+</div>
+
+</body>
+</html>

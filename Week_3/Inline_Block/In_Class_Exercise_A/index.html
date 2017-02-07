@@ -2,8 +2,49 @@
 <html>
 <head>
   <title>Inline Block</title>
+  <style type="text/css">
+    /* use the universal selector to remove all defualt margins and padding from elements */
+    *{
+     /*  border: 1px solid red;*/      
+      margin: 0;
+      padding: 0;
+    }
+    /* use grouped tag selectors to give a background color  */
+    main, article{
+      background-color: rgba(0,0,255,0.2);
+    }
+    
+    main{
+      width: 900px;
+      margin:  0 auto;
+      padding: 20px;
+    }
+
+    article{
+      width:  300px;
+      height: 300px;
+      display: inline-block;
+      /* border:  width | style | color; */
+      border: 1px solid #006FFF;
+      /* 300px - 2*1px = 298px */
+      margin-right: -4px;
+      width: 298px;
+      margin: 10px;
+      /* 298 - 2*10px */
+      width:  274px;
+
+    }
+
+
+  </style>
 </head>
 <body>
+
+<main>
+  <article>1</article>
+  <article>2</article>
+  <article>3</article>
+</main>
 
 </body>
 </html>

@@ -1,27 +1,160 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Positioning</title>
+    <title>Positioning</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /* using descendant selectors to only target the H1 element inside a header tag */
+    
+    header h1 {
+        color: grey;
+        width: 28%;
+        display: inline-block;
+        line-height: 60px;
+    }
+    
+    nav {
+        width: 70%;
+        display: inline-block;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        text-align: right;
+    }
+    
+    nav ul li {
+        display: inline-block;
+    }
+    
+    ul li a {
+        display: block;
+        padding: 10px;
+        background-color: #333;
+        color: white;
+        text-decoration: none;
+    }
+    
+    ul li a:hover {
+        background-color: #555;
+    }
+    
+    p {
+        font-size: 14px;
+        line-height: 28px;
+        padding: 10px 0;
+    }
+    
+    header {
+        position: fixed;
+        width: 100%;
+        display: block;
+        background-color: #ccc;
+    }
+    
+    main {
+        padding-top: 60px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    p.pos-abs {
+        color: red;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        /*  padding: 200px; */
+    }
+    
+    p.pos-rel {
+        color: blue;
+        position: relative;
+        top: 0px;
+        left: 150px;
+    }
+    
+    #abs {
+        height: 100px;
+        width: 100px;
+        background-color: green;
+        position: absolute;
+        right: 0px;
+        top: 100px;
+    }
+    
+    #rel {
+        height: 100px;
+        width: 100px;
+        background-color: yellow;
+        position: relative;
+        right: 0px;
+        top: -100px;
+    }
+    
+    #rel-parent {
+        width: 600px;
+        height: 600px;
+        background-color: tomato;
+        position: relative;
+    }
+    
+    #abs-child {
+        height: 100px;
+        width: 100px;
+        background-color: teal;
+        position: absolute;
+        bottom: 0px;
+        right: 50px;
+    }
+
+    section{
+      display: inline-block;
+      width: 60%;
+    }
+
+    aside{
+      display: inline-block;
+      width: 30%;
+    }
+    </style>
 </head>
+
 <body>
-
-<header>
-  <h1>Website Title</h1>
-  <nav>
-    <ul>
-      <li><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
-      <li><a href="#">Link 3</a></li>
-    </ul>
-  </nav>
-</header>
-<main>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ligula tristique, egestas nibh eget, vulputate lectus. Etiam vehicula, augue at vulputate egestas, turpis lorem porttitor risus, tempor lacinia mauris urna vitae nisi. Nullam non vestibulum justo. Ut ut mollis lacus. Nam egestas rutrum urna, sit amet rhoncus sapien tempus non. Nunc tempus erat non bibendum placerat. Maecenas mollis urna justo, quis pharetra elit ornare id. Praesent ullamcorper consectetur leo. Maecenas fermentum arcu in eros faucibus, nec aliquam mi sollicitudin. Mauris pretium dui at dignissim vulputate. Phasellus eros nisi, porttitor in tellus ac, vehicula ornare sapien. Nullam congue bibendum erat, gravida sagittis tortor ultrices quis.</p>
-
-<p>Quisque et ligula a purus consequat rutrum. Proin vehicula felis egestas tellus blandit interdum. Duis ac pulvinar lorem. Integer sed dolor id nulla fermentum blandit. Nunc augue odio, dictum vitae imperdiet ut, eleifend in elit. Nulla sagittis interdum dolor pulvinar vulputate. Cras vel massa ligula. Morbi vitae consectetur ante. Maecenas vestibulum ut nunc eget suscipit. Curabitur imperdiet lacinia erat et elementum. Cras ornare vitae velit ut eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent blandit nisl massa.</p>
-</main>
-<footer>
-  
-</footer>
+    <header>
+        <h1>Website Title</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Just to prove a point</h1>
+        <p class="pos-abs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ligula tristique, egestas nibh eget, vulputate lectus. Etiam vehicula, augue at vulputate egestas, turpis lorem porttitor risus, tempor lacinia mauris urna vitae nisi. Nullam non vestibulum justo. Ut ut mollis lacus. Nam egestas rutrum urna, sit amet rhoncus sapien tempus non. Nunc tempus erat non bibendum placerat. Maecenas mollis urna justo, quis pharetra elit ornare id. Praesent ullamcorper consectetur leo. Maecenas fermentum arcu in eros faucibus, nec aliquam mi sollicitudin. Mauris pretium dui at dignissim vulputate. Phasellus eros nisi, porttitor in tellus ac, vehicula ornare sapien. Nullam congue bibendum erat, gravida sagittis tortor ultrices quis.</p>
+        <p class="pos-rel">Quisque et ligula a purus consequat rutrum. Proin vehicula felis egestas tellus blandit interdum. Duis ac pulvinar lorem. Integer sed dolor id nulla fermentum blandit. Nunc augue odio, dictum vitae imperdiet ut, eleifend in elit. Nulla sagittis interdum dolor pulvinar vulputate. Cras vel massa ligula. Morbi vitae consectetur ante. Maecenas vestibulum ut nunc eget suscipit. Curabitur imperdiet lacinia erat et elementum. Cras ornare vitae velit ut eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent blandit nisl massa.</p>
+        <section>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ligula tristique, egestas nibh eget, vulputate lectus. Etiam vehicula, augue at vulputate egestas, turpis lorem porttitor risus, tempor lacinia mauris urna vitae nisi. Nullam non vestibulum justo. Ut ut mollis lacus. Nam egestas rutrum urna, sit amet rhoncus sapien tempus non. Nunc tempus erat non bibendum placerat. Maecenas mollis urna justo, quis pharetra elit ornare id. Praesent ullamcorper consectetur leo. Maecenas fermentum arcu in eros faucibus, nec aliquam mi sollicitudin. Mauris pretium dui at dignissim vulputate. Phasellus eros nisi, porttitor in tellus ac, vehicula ornare sapien. Nullam congue bibendum erat, gravida sagittis tortor ultrices quis.</p>
+            <p>Quisque et ligula a purus consequat rutrum. Proin vehicula felis egestas tellus blandit interdum. Duis ac pulvinar lorem. Integer sed dolor id nulla fermentum blandit. Nunc augue odio, dictum vitae imperdiet ut, eleifend in elit. Nulla sagittis interdum dolor pulvinar vulputate. Cras vel massa ligula. Morbi vitae consectetur ante. Maecenas vestibulum ut nunc eget suscipit. Curabitur imperdiet lacinia erat et elementum. Cras ornare vitae velit ut eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent blandit nisl massa.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ligula tristique, egestas nibh eget, vulputate lectus. Etiam vehicula, augue at vulputate egestas, turpis lorem porttitor risus, tempor lacinia mauris urna vitae nisi. Nullam non vestibulum justo. Ut ut mollis lacus. Nam egestas rutrum urna, sit amet rhoncus sapien tempus non. Nunc tempus erat non bibendum placerat. Maecenas mollis urna justo, quis pharetra elit ornare id. Praesent ullamcorper consectetur leo. Maecenas fermentum arcu in eros faucibus, nec aliquam mi sollicitudin. Mauris pretium dui at dignissim vulputate. Phasellus eros nisi, porttitor in tellus ac, vehicula ornare sapien. Nullam congue bibendum erat, gravida sagittis tortor ultrices quis.</p>
+        </section>
+        <aside>
+            <p>Quisque et ligula a purus consequat rutrum. Proin vehicula felis egestas tellus blandit interdum. Duis ac pulvinar lorem. Integer sed dolor id nulla fermentum blandit. Nunc augue odio, dictum vitae imperdiet ut, eleifend in elit. Nulla sagittis interdum dolor pulvinar vulputate. Cras vel massa ligula. Morbi vitae consectetur ante. Maecenas vestibulum ut nunc eget suscipit. Curabitur imperdiet lacinia erat et elementum. Cras ornare vitae velit ut eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent blandit nisl massa.</p>
+        </aside>
+        
+        <div id="abs"></div>
+        <div id="rel"></div>
+        <div id="rel-parent">
+            <div id="abs-child"></div>
+        </div>
+    </main>
+    <footer>
+    </footer>
 </body>
+
 </html>

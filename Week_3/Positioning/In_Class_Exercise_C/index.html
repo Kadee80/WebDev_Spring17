@@ -2,6 +2,65 @@
 <html>
 <head>
   <title>Positioning</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    body{
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    header{
+      background-color: #999;
+      height: 100px;
+    }
+    /* decendant selectors to only target h1 elements who have a parent element of header */
+    header h1{
+      color:  white;
+      display: inline-block;
+      max-width: 20%;
+      line-height:  100px;
+      overflow:  hidden;
+    }
+
+    /* make a right side navigation using text align and inline block  */
+    header nav{
+      display: inline-block;
+      float: right;
+      height:  100px;
+      overflow:  hidden;
+    }
+
+    nav ul{
+      list-style-type: none;
+      text-align: right;
+      line-height: 100px;
+
+    }
+
+    nav ul li{
+      display: inline-block;
+      margin:  auto -2px;
+    }
+
+    nav ul li a{
+      display: block;
+      padding: 0 20px;
+      color: white;
+      text-decoration: none;
+   }
+
+   nav ul li a:hover{
+    background-color: black;
+   }
+
+    p{
+      margin: 1em 0;
+    }
+
+  </style>
 </head>
 <body>
 
@@ -15,7 +74,9 @@
     </ul>
   </nav>
 </header>
+
 <main>
+<h1>Website Title Outside Header</h1>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ligula tristique, egestas nibh eget, vulputate lectus. Etiam vehicula, augue at vulputate egestas, turpis lorem porttitor risus, tempor lacinia mauris urna vitae nisi. Nullam non vestibulum justo. Ut ut mollis lacus. Nam egestas rutrum urna, sit amet rhoncus sapien tempus non. Nunc tempus erat non bibendum placerat. Maecenas mollis urna justo, quis pharetra elit ornare id. Praesent ullamcorper consectetur leo. Maecenas fermentum arcu in eros faucibus, nec aliquam mi sollicitudin. Mauris pretium dui at dignissim vulputate. Phasellus eros nisi, porttitor in tellus ac, vehicula ornare sapien. Nullam congue bibendum erat, gravida sagittis tortor ultrices quis.</p>
 
 <p>Quisque et ligula a purus consequat rutrum. Proin vehicula felis egestas tellus blandit interdum. Duis ac pulvinar lorem. Integer sed dolor id nulla fermentum blandit. Nunc augue odio, dictum vitae imperdiet ut, eleifend in elit. Nulla sagittis interdum dolor pulvinar vulputate. Cras vel massa ligula. Morbi vitae consectetur ante. Maecenas vestibulum ut nunc eget suscipit. Curabitur imperdiet lacinia erat et elementum. Cras ornare vitae velit ut eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent blandit nisl massa.</p>

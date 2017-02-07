@@ -2,8 +2,40 @@
 <html>
 <head>
   <title>Inline Block</title>
+  <style type="text/css">
+    /* use * to remove all margins and padding from our elements */
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    /* use grouped selectors to apply the same styles to multiple tags on our page */
+    main, article{
+      background-color: rgba(0,0,255,0.2);
+    }
+
+    main{
+      width: 900px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+
+    article{
+      width: 300px;
+      height: 300px;
+      display: inline-block;
+      /* fix default extra margin with a negative margin on the right */
+      margin-right:  -4px;
+      /* border: width | style | color; */
+      border:  1px solid blue;
+      width: 298px;
+      margin: 0 10px;
+      width:  275px;
+    }
+
+  </style>
 </head>
 <body>
+
 <main>
   <article>1</article>
   <article>2</article>

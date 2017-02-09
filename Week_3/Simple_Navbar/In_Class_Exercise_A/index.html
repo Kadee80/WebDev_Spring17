@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic UL Navbar</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    body{
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    ul{
+      /* remove the bullet points */
+      list-style-type: none;
+      overflow: hidden;
+      background-color: #999;
+    }
+
+    li{
+      /* float first and thenwe will switch to inline */
+      /* float: left; */
+      /* use inline */
+      display: inline-block;
+    }
+
+    li a{
+      /* anchor tags by default display inline, here we are telling them to behave like a block element. Making the anchor block and adding dimensions padding we get a bigger clickable area for the user to select*/
+      display: block;
+      text-align: center;
+      width: 100px;
+      padding: 10px;
+      /* remove that ugly underline and color */
+      color: #333;
+      text-decoration: none;
+    }
+
+    li a:hover{
+      background-color: #111;
+      color: white;
+    }
+
+    li a.active{
+      background-color: #888;
+    }
+
+  </style>
+
+</head>
+<body>
+  <ul>
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#" >About</a></li>
+    <li><a href="#" >News</a></li>
+    <li><a href="#" >Contact</a></li>
+  </ul>
+</body>
+</html>

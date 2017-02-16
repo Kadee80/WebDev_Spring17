@@ -1,4 +1,6 @@
-# Reading - Next week we begin an introduction to Javascript. Although use of JavaScript is not required for your Midterm, those of you who wish to implement it are welcome to. Come to class next week having read the class notes for Week_7.
+# Reading - 
+
+Next week we begin an introduction to Javascript. Although use of JavaScript is not required for your Midterm, those of you who wish to implement it are welcome to. Come to class next week having read the class notes for Week_7.
 
 # HW - Keep working on your midterm sites. 
 

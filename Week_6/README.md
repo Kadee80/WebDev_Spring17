@@ -1,3 +1,5 @@
+# Reading - Next week we begin an introduction to Javascript. Although use of JavaScript is not required for your Midterm, those of you who wish to implement it are welcome to. Come to class next week having read the class notes for Week_7.
+
 # HW - Keep working on your midterm sites. 
 
 Remember, I am available for office hours the hour before class. If you have a question, I'm here to help. People who email and schedule a time will have priority over walk ins.
@@ -13,3 +15,5 @@ If you want a tooltip, [check out this W3 schools tutorial](http://www.w3schools
 If you want a pure CSS popup window, [check out this example I wrote](Modal_Window/)
 
 If you are struggling with CSS layouts and responsive media queries, [check out 996 Grid Framework](http://996grid.com/). We will be using it for our quick portfolio example this week!
+
+

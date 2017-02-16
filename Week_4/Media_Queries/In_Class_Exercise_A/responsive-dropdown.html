@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    /* remove defaults */
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /* remove bullets etc to make ul more like nav wrapper*/
+    
+    nav ul {
+        list-style: none;
+        position: relative;
+        /* float: left; */
+    }
+    /* stack the li to the left with float and a fixed width  */
+    
+    nav ul li {
+        width: 100px;
+        float: left;
+        overflow: hidden;
+    }
+    /* change navbar item colo on hover */
+    
+    nav ul li:hover {
+        background: #aaa;
+    }
+    /* make the a tags display like block elements to take up full space of container li*/
+    
+    nav ul a {
+        display: block;
+        color: #222;
+        text-decoration: none;
+        line-height: 30px;
+        padding: 15px;
+        text-align: center;
+    }
+    /* hide sublists be default */
+    
+    nav ul ul {
+        display: none;
+        /* change bg so we can see what we are affecting*/
+        background: #ddd;
+
+    }
+    /* give "dropdown" a sepcific width */
+    
+    nav ul ul li {
+        /* float: none; */
+        width: 200px;
+    }
+    /* align in drop down text left vs center for main navbar */
+    
+    nav ul ul a {
+        padding: 15px;
+        text-align: left;
+    }
+    /* Selects all <ul> elements where the its parent is an unordered list, with a moused over list item */
+    
+    nav ul li:hover > ul {
+        /* only show child lists when the parent li is hovered over, OR when child ul is hovered over */
+        display: block;
+        /* change color to see what we are looking at */
+        background-color: #ccc;
+    }
+    /* change in internal ul background color for hover */
+    
+    nav ul li:hover > ul li:hover {
+        background: #999
+    }
+    
+    @media only screen and (max-width: 767px) {
+        nav ul li {
+            width: 100%;
+            display: block;
+        }
+        nav ul ul li {
+            width: 100%;
+        }
+        nav ul ul a {
+            padding: 15px;
+            text-align: center;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Dropdown</a>
+                <ul>
+                    <li><a href="#">Goats</a></li>
+                    <li><a href="#">Cats</a></li>
+                    <li><a href="#">Chickens</a></li>
+                    <li><a href="#">Dogs</a>
+                </ul>
+                </li>
+                <li><a href="#">Link</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

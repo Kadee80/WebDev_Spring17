@@ -77,10 +77,6 @@ nav a:hover{
     color: #FFF;
 }
 
-
-
-
-
 /* Gallery */
 
 .container{
@@ -115,3 +111,85 @@ nav a:hover{
     font: 400 18px 'Kaushan Script', cursive;
     color: #888;
 }
+
+/* Tranforms  */
+
+.rotate-left, .scaleUniform, .scaleX, .rotY{
+    transition: all 2s ease-in-out;
+}
+
+.rotate-left{
+    transform: rotate(-10deg);
+    transform-origin: 50% 50%;   
+}
+
+.rotate-left:hover{
+    transform: rotate(10deg);
+}
+
+.scaleUniform{
+    transform: scale(0.5);
+    z-index: 20;
+}
+
+.scaleUniform:hover{
+    transform: scale(1.5);
+}
+
+.scaleX{
+    transform: scale(2,1);
+}
+
+.scaleX:hover{
+    transform: scale(0.5,1);
+}
+
+.scaleY{
+    transform: scale(1,2);
+}
+
+.skewX{
+    transform: skewX(20deg);
+}
+
+.skewY{
+    transform: skewY(20deg);
+}
+
+.skewBoth{
+    transform: skew(-45deg, 4deg);
+}
+
+.rotX{
+    transform: rotateX(45deg);
+}
+
+.rotY{
+    transform: rotateY(0deg);
+}
+
+.rotY:hover{
+    transform: rotateY(360deg);
+}
+
+.rotZ{
+    transform: rotateZ(45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

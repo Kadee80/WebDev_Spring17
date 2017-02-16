@@ -10,6 +10,6 @@ If you are looking for a collapsable accordion, [check out this W3 Schools tutor
 
 If you want a tooltip, [check out this W3 schools tutorial](http://www.w3schools.com/howto/howto_css_tooltip.asp).
 
-If you want a pure CSS popup window, [check out this example I wrote](../Modal_Window)
+If you want a pure CSS popup window, [check out this example I wrote](Modal_Window/)
 
 If you are struggling with CSS layouts and responsive media queries, [check out 996 Grid Framework](http://996grid.com/). We will be using it for our quick portfolio example this week!

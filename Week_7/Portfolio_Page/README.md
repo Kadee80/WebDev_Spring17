@@ -6,7 +6,7 @@ This example will use:
 
 * [Image Optimization with Photoshop](../../Week_6/Photoshop/)
 
-* [Transitions](../../Week_4/CSS-Transforms_Transitions/)
+* [Transitions](../../Week_4/CSS_Transforms_Transitions/)
 
 * [Postioning](../../Week_3/Positioning/)
 

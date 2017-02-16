@@ -4,9 +4,12 @@ Let’s take the images we just created, cropped and optimized and start making 
 
 This example will use:
 
-* Transitions
+* [Image Optimization with Photoshop](../../Week_6/Photoshop/)
 
-* Postioning
+* [Transitions](../../Week_4/CSS-Transforms_Transitions/)
 
-* 996 Grid Framework
+* [Postioning](../../Week_3/Positioning/)
 
+* [996 Grid Framework](../../Week_6/996_Grid/)
+
+If you are still unclear on any of these topics, now is the time to review class examples and notes before moving on to a new topic.

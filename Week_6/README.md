@@ -8,6 +8,8 @@ Remember, I am available for office hours the hour before class. If you have a q
 
 Web development is constantly changing. It is a lot of reading docs, and following tutorials and examples as you learn new skills. Here are a few links to some standard tutorials of more complex CSS applications:
 
+If you want to explore various ways to turn an unordered list of links `ul li a` into a navigation bar, [check out these tutorials from W3 Schools](https://www.w3schools.com/css/css_navbar.asp)
+
 If you want a pure CSS slider, [check out this tutorial](https://www.smashingmagazine.com/2012/04/pure-css3-cycling-slideshow/).
 
 If you are looking for a collapsable accordion, [check out this W3 Schools tutorial](http://www.w3schools.com/howto/howto_js_accordion.asp). (This example is more simple than the pure CSS version. It does however, utilize a small amount of JavaScript.)

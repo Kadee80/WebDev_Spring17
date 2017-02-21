@@ -15,6 +15,27 @@ Today you will be presenting your midterm proposals to your classmates. Please b
 
 order will be posted here once generated at the beginning of class.
 
+Natalia
+Lillian
+Kevin F
+Edan
+Matthew C
+Hung
+Kevin L
+Maria
+Arnav
+Michael
+
+Mahindra
+Greta
+David
+Huiwah
+Monjur
+Hyun
+Danny
+Joris
+Michelle
+
 #Presentation Schedule Section A:
 
 order will be posted here once generated at the beginning of class.

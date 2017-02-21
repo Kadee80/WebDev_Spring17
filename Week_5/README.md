@@ -15,26 +15,26 @@ Today you will be presenting your midterm proposals to your classmates. Please b
 
 order will be posted here once generated at the beginning of class.
 
-Natalia
-Lillian
-Kevin F
-Edan
-Matthew C
-Hung
-Kevin L
-Maria
-Arnav
-Michael
+1. Natalia
+2. Lillian
+3. Kevin F
+4. Edan
+5. Matthew C
+6. Hung
+7. Kevin L
+8. Maria
+9. Arnav
+10. Michael
 
-Mahindra
-Greta
-David
-Huiwah
-Monjur
-Hyun
-Danny
-Joris
-Michelle
+11. Mahindra
+12. Greta
+13. David
+14. Huiwah
+15. Monjur
+16. Hyun
+17. Danny
+18. Joris
+19. Michelle
 
 #Presentation Schedule Section A:
 

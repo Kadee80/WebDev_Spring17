@@ -13,7 +13,7 @@ Today you will be presenting your midterm proposals to your classmates. Please b
 
 #Presentation Schedule Section C:
 
-order will be posted here once generated at the beginning of class.
+If you have not done so already, please be sure to email me your documentation/proposal link along with a link to your HW repo. You can view your [classmates work here](https://github.com/Kadee80/WebDev_Spring17/wiki/Midterm-Proposals-Section-C).
 
 1. Natalia
 2. Lillian
@@ -25,8 +25,9 @@ order will be posted here once generated at the beginning of class.
 8. Maria
 9. Arnav
 10. Michael
-
 11. Mahindra
+
+
 12. Greta
 13. David
 14. Huiwah
@@ -38,7 +39,7 @@ order will be posted here once generated at the beginning of class.
 
 #Presentation Schedule Section A:
 
-order will be posted here once generated at the beginning of class.
+order will be posted here once generated at the beginning of class. please email me your blog link and github repo before presenting. you can view your [classmates work here](https://github.com/Kadee80/WebDev_Spring17/wiki/Midterm-Proposals-Section-A)
 
 #HW - Begin building out your midterm site. 
 

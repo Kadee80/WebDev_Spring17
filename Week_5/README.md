@@ -41,6 +41,26 @@ If you have not done so already, please be sure to email me your documentation/p
 
 order will be posted here once generated at the beginning of class. please email me your blog link and github repo before presenting. you can view your [classmates work here](https://github.com/Kadee80/WebDev_Spring17/wiki/Midterm-Proposals-Section-A)
 
+1. Luvneesh
+2. Jane
+3. Asim
+4. Valeria
+5. Mounir
+6. Adam
+7. Jason
+8. Ikra
+9. Leo
+
+1. Jarret
+2. Nicholas
+3. Gilbert
+4. Brendon
+5. Meghan
+6. Jediah
+7. Alejandra
+8. Stephanie
+9. Lauren
+
 #HW - Begin building out your midterm site. 
 
 Start by building out a functional wireframe with HTML and CSS. If you are still struggling with layout concepts such as block float and inline-block, next weeks tutorial on 996 Grid Framework will be helpful. You can review class notes on this [here](../Week_6/996_Grid).

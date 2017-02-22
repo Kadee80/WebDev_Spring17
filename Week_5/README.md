@@ -28,14 +28,14 @@ If you have not done so already, please be sure to email me your documentation/p
 11. Mahindra
 
 
-12. Greta
-13. David
-14. Huiwah
-15. Monjur
-16. Hyun
-17. Danny
-18. Joris
-19. Michelle
+1. Greta
+2. David
+3. Huiwah
+4. Monjur
+5. Hyun
+6. Danny
+7. Joris
+8. Michelle
 
 #Presentation Schedule Section A:
 

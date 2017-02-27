@@ -22,7 +22,7 @@ ________
 
 *To contact professor: kaa328@nyu.edu*
 
-*Office hours can be viewed and booked here*
+*[Office hours can be viewed and booked here](https://calendar.google.com/calendar/selfsched?sstoken=UUNXcDRjZFIwTXZDfGRlZmF1bHR8NDkzNWVkOWUxNGI3M2FkZTJlYTY0YjU0ZmRiNjJiYTE)*
 
 ## Course Pre-requisites
 

@@ -53,7 +53,7 @@ order will be posted here once generated at the beginning of class. please email
 
 #### Monday
 1. Jarret
-2. Nicholas
+2. Nicolas
 3. Gilbert
 4. Brendon
 5. Megan

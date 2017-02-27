@@ -51,11 +51,12 @@ order will be posted here once generated at the beginning of class. please email
 8. Ikra
 9. Leo
 
+
 1. Jarret
 2. Nicholas
 3. Gilbert
 4. Brendon
-5. Meghan
+5. Megan
 6. Jediah
 7. Alejandra
 8. Stephanie

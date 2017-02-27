@@ -51,7 +51,7 @@ order will be posted here once generated at the beginning of class. please email
 8. Ikra
 9. Leo
 
-
+#### Monday
 1. Jarret
 2. Nicholas
 3. Gilbert

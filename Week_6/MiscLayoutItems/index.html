@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hero|Jumbotron Tagline Grid | Font Awesome</title>
+    <style type="text/css">
+    /* remove margin and padding to get rid of 8px in top left of browser */
+    
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Helvetica", Arial, sans-serif;
+    }
+    
+    div.hero {
+        width: 100vw;
+        /* make this parent conatiner position relative so we can position absolute or realtive over it with a child element */
+        position: relative;
+    }
+    
+    .hero img {
+        width: 100%;
+    }
+    
+    .hero article {
+        width: 50vw;
+        /* if we want to center it over the image horizonally dont use right property */
+        /* margin: 0 25vw; */
+        position: absolute;
+        right: 0;
+        top: 60%;
+        color: white;
+        padding: 2%;
+        background-color: rgba(100, 100, 100, 0.5);
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
+        background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=1);
+        /* IE6-9 */
+    }
+    
+    button,
+    a.button {
+        /* for a button elements */
+        border: 2px solid black;
+        /* CSS3 you will need browser prefixes! */
+        border-radius: 7px;
+        display: inline-block;
+        line-height: 25px;
+        width: 200px;
+        padding: 5px;
+        background-color: #FFF;
+        font-size: 18px;
+        /* Anchor Tags */
+        color: black;
+        text-decoration: none;
+        text-align: center;
+        /* Anchor Tag with role button and no href */
+        cursor: pointer;
+        transition: all 0.5s linear;
+    }
+    
+    button:hover,
+    a.button:hover {
+        border-color: white;
+        background-color: black;
+        color: white;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <img src="http://placehold.it/600x300/333333/FFFFFF?text=web-dev-rocks">
+        <article>
+            <h1>Selling You Stuff</h1>
+            <p>This is a paragraph that explains why you need to by all the stuff on the website.</p>
+            <a class="button" href="#">Link to Stuff</a>
+            <a class="button" role="button">Add Stuff to Cart</a>
+            <button>Calculate Stuff</button>
+        </article>
+    </div>
+</body>
+
+</html>

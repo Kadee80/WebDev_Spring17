@@ -7,6 +7,97 @@ Copyright 2013, Josh Cope
    Site Styles
    ========================================================================== */
 
+.thumb{
+  position: relative;
+  overflow: hidden;
+}
+
+.thumb .mask{
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding: 2%;
+  background-color: rgba(255,255,255,0.5);
+  height: 100%;
+  /* youre welcome! less math, padding and border no longer effect overall width and height */
+  box-sizing: border-box;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.mask h2{
+  /* offset-x | offset-y | blur-radius | color */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.mask p{
+  font-style: italic;
+  font-weight: 300;
+}
+
+a.info{
+  display: inline-block;
+  border:  2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  background-color: #333;
+  text-decoration: none;
+  transition: all 1s ease;
+}
+
+/* scale down and hide all text before hover */
+.thumb .mask h2,
+.thumb .mask p,
+.thumb .mask a.info{
+    opacity: 0;
+    transform: scale(0);
+    transition: all 1.2s ease;
+}
+
+/* prepare my image states so i can transition them over time */
+.thumb img{
+  transform: scale(1);
+  transform: rotate(0deg);
+  transition: all 1s ease-in-out;
+}
+
+/* hover transitions here */
+
+.thumb:hover img{
+  transform: scale(1.5) rotate(-20deg);
+}
+
+.thumb:hover .mask{
+  opacity: 1;
+}
+
+a.info:hover{
+  color: #333;
+  background-color: white;
+}
+
+
+.thumb:hover .mask h2,
+.thumb:hover .mask p,
+.thumb:hover .mask a.info{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.vid{
+  margin-top: 25px;
+}
+
+
+
+
+
+
+
+
+
 /* =============================================================================
    Page Styles
    ========================================================================== */

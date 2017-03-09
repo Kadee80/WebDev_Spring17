@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+  <html>
+
+    <head>
+      <title>Adding To The DOM</title>
+    </head>
+
+    <body>
+      <button onclick="addSingleP()">Add a Single P Function (the bad way....)</button>
+      <button onclick="addMultiP(8)">Add multiple P using a loop and nodes (the good way)</button>
+      <div id="content">
+        <!-- this div will be populated by javascript functions -->
+      </div>
+
+      <script type="text/javascript">
+        // declare our global variables first!
+        var content;
+        // since our script loads after our html, we can assign the value here.
+        content = document.getElementById('content');
+
+        console.log(content);
+
+        // laxy dom creation
+        function addSingleP(){
+          // add a p tag via string and inner html
+          content.innerHTML = "<p>This is a single paragraph tag added the bad way!</p>"
+        }
+
+        function addMultiP(num){
+          // start our loop to loop through num
+          for(var i=0; i<num; i++){
+            console.log(i);
+            //create a p element
+            var p = document.createElement('P');
+            // create some text to append to the empty paragraph we just created above
+            var text = document.createTextNode("this is paragraph number: " + i);
+
+            //attach text into our paragraph element
+            p.appendChild(text);
+
+            //append our p element into our content div
+            content.appendChild(p);
+          }
+        }
+
+      </script>
+    </body>
+</html>

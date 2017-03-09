@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS 101</title>
+    <script type="text/javascript">
+    // declare a variable
+    // shorthand for declaring and assign value on one line
+    var myVar = "number";
+    console.log(myVar);
+    //declare
+    var myOtherVar;
+    console.log(myOtherVar); //will log undefined because no value has been assigned
+    //assign a value
+    myOtherVar = 4 + 4;
+    console.log(myOtherVar);
+    console.log(typeof myOtherVar);
+
+    // integrate/mix traings and variable for echoing out data to a user
+    var temp = 60;
+    console.log("Today's temperature is " + temp + " degrees F.")
+
+    // a function to sum values passed in as parameters called on click
+
+    function calcBill(a, b) {
+        var sum = a + b;
+        alert("Your Bill Is: $" + sum)
+    }
+    // calcBill(100.00, 50.55);
+
+    // Booleans
+
+    var isOn = true;
+
+    function switchOnOff() {
+      if (isOn === true){
+        // code here is exectured when if statement evaluates to true
+        alert("isOn is TRUE. Switching to FALSE now.")
+        isOn = false;
+      } else {
+        // code here is exectured when if statement evaluates to false
+        alert("isOn is FALSE. Switching to TRUE now.")
+        isOn = true;
+      }
+    }
+
+    //LOOPS and INCREMENTS
+
+    function countToN(num){
+      // loop that starts at 0 and increments up to our num and logs it to the console
+      // i++ is the same as i=i+1 or i+=1
+      // i+=2 is the same as i=i+2
+      for (var i = 0; i < num; i+=2 ) {
+        console.log(i);
+      }
+    }
+
+    countToN(89);
+    </script>
+</head>
+
+<body>
+    <button onclick="calcBill(45.00, 5.25)">Calculate Bill</button>
+    <button onclick="switchOnOff()">Toggle On Off</button>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event Listeners/Delegation (Teaser)</title>
+    <style type="text/css">
+    img {
+        display: block;
+    }    
+    .hidden {
+        display: none;
+    }
+    .active{
+      color: red;
+    }
+    </style>
+
+    <script type="text/javascript">
+      // wait for the DOM to be loaded before executing certain lines of code
+
+      document.addEventListener('DOMContentLoaded', function() {
+        console.log('locked and loaded');
+        // add our event listeners after our DOM has fully loaded
+        // in this example the callback function is anonymous, aka we call a function here and it happens and never can be called elsewhere
+        document.getElementById('hideBtn').addEventListener('click', hideMurray);
+
+        document.getElementById('eventH1').addEventListener('mouseover', function(event){
+          console.log(event.target);
+          var el = event.target;
+          el.classList.toggle('active');
+        })
+
+      });
+      
+      function hideMurray() {
+          var murray = document.getElementById('bill');
+          murray.classList.toggle('hidden');
+      }
+    </script>
+
+</head>
+
+<body>
+  <h1 id="eventH1">This H1 is here to be moused over so we can see the event object</h1>
+    <button id="hideBtn">Hide</button>
+    <div>
+        <img id="bill" src="http://www.fillmurray.com/800/400" />
+    </div>
+    </style>
+</body>
+
+</html>

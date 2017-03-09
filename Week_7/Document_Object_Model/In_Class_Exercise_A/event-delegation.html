@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event Delegation and Toggle</title>
+    <style>
+    .active {
+        color: red;
+        font-size: 20px;
+    }
+    </style>
+    <script type="text/javascript">
+    // dumb function to fire with an event
+    function alertMe() {
+        alert('I am an annoying alert box!');
+    }
+
+    //add an anonymous function to watch and wait for the dom content to completely load 
+    document.addEventListener('DOMContentLoaded', function() {
+        //anything that happens here inside this anonymous function will only fire when the page is fully loaded, this a good place to grab elements and palce them in variables
+        console.log('fully loaded and parsed');
+
+        //grab the button and add an event listener
+        document.getElementById('alertBtn').addEventListener('click', alertMe);
+
+        document.getElementById('toggleMe').addEventListener('click', function(e) {
+            // log out the event object and expand it in console
+            console.log(e);
+            //  what we care about is the target of the event ie: element in the event
+            console.log(e.target);
+            //pass this element from target into a var
+            var element = e.target;
+            // toggle on off class list
+            element.classList.toggle('active');
+        });
+
+
+    });
+    </script>
+</head>
+
+<body>
+    <p id="toggleMe">Just a p tag to toggle classes with event listeners</p>
+    <button id="alertBtn">Click to Fire a Function with add event listener</button>
+</body>
+
+</html>

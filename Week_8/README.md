@@ -23,6 +23,8 @@ You can add links with markdown as follows:
 ```
 ## Section A Presentation Order
 
+**NOTE: You will each be assigned a fellow classmate to ask a question after they have presented.**
+
 - Luvneesh
 - Nicholas
 - Stephanie

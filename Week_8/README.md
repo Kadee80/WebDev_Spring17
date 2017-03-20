@@ -23,14 +23,14 @@ You can add links with markdown as follows:
 ```
 ## Section A Presentation Order
 
+- Luvneesh
 - Nicholas
 - Stephanie
 - Jane
-- Gilbert
 
 - Alejandra
 - Lauren
-- Luvneesh
+- Gilbert
 - Irka
 
 - Jarret

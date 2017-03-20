@@ -29,7 +29,7 @@ You can add links with markdown as follows:
 - Nicholas
 - Stephanie
 - Jane
-
+- Valeria
 - Alejandra
 - Lauren
 - Gilbert
@@ -39,8 +39,6 @@ You can add links with markdown as follows:
 - Asim
 - Jason
 - Leo
-
-- Valeria
 - Brendon
 - Adam
 - Mounir

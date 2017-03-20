@@ -21,5 +21,25 @@ You can add links with markdown as follows:
 ```
 [The Link Title A User Sees](http://theURLtoLINKto.com)
 ```
+## Section A Presentation Order
 
-Before we begin, lets take a look at the Shuffle_Student folder to see how we will be chosing a random order for our presentations today and Wednesday. After we generate a list together, the order will be posted below.
+- Nicholas
+- Stephanie
+- Jane
+- Gilbert
+
+- Alejandra
+- Lauren
+- Luvneesh
+- Irka
+
+- Jarret
+- Asim
+- Jason
+- Leo
+
+- Valeria
+- Brendon
+- Adam
+- Mounir
+

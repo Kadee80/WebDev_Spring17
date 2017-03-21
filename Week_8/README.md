@@ -33,13 +33,13 @@ You can add links with markdown as follows:
 - Alejandra
 - Lauren
 - Gilbert
-- Irka
 
+- Adam
+- Irka
 - Jarret
 - Asim
 - Jason
 - Leo
 - Brendon
-- Adam
 - Mounir
 

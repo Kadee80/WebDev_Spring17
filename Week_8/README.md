@@ -43,3 +43,28 @@ You can add links with markdown as follows:
 - Brendon
 - Mounir
 
+## Section C Presenation Order
+**NOTE: You will each be assigned a fellow classmate to ask a question after they have presented. (The person that presents after you) **
+- Hung
+- Mahindra
+- Arnav
+- Greta
+- Danny
+
+- Edan
+- David
+- Matthew C
+- Michelle
+- Kevin F
+
+- Michael
+- Lillian
+- Joris
+- Natalia
+- Huiwah
+
+- Hyun
+- Maria
+- Monjur
+- Kevin L
+

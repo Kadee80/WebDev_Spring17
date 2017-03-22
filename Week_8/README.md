@@ -36,7 +36,6 @@ You can add links with markdown as follows:
 
 - Adam
 - Irka
-- Jarret
 - Asim
 - Jason
 - Leo

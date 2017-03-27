@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arrays 101</title>
+  <script type="text/javascript">
+    // declare a variable called months without assigning a value or a type
+    var months;
+    console.log(months);
+    // assign an empty array as the value of months
+    months = [];
+    console.log(months);
+    // console.log(typeof months);
+
+    months = ["January", "February", "March", "April", "May", "June"];
+    // we can access the length of an array using .length property
+    console.log(months.length);
+
+    // remove the last month in our array from our months array
+    // and assign it to another variable
+    var lastMonth = months.pop();
+    console.log(months.length);
+    console.log(months);
+    console.log("We just removed " + lastMonth + " from the calendar!");
+
+    // what if we want to log the 2nd month in our year? we can access it by index number
+    // remember array indexes start at 0
+    console.log(months[1]);
+
+    // Add June back into our calendar using push. push always adds a value to the end of our array
+    // months.push("june");
+    months.push(lastMonth);
+    console.log(months);
+
+    // use a for loop to list out the values in our array
+    // this is what you will need to do to list them outside of the console
+    for (var i = 0; i < months.length; i++){
+      console.log(i + " : " + months[i]);
+    }
+
+    // loop through the months array backwards and delete the last item using pop
+    // for (var i = months.length; i > 0;  i--){
+    //   // pass the deleted item into a temp variable called dm
+    //   var dm = months.pop();
+    //   console.log("Deleted " + dm + " the new array length is " + months.length);
+    // }
+    // this array item no longer exsists and will return undefined
+    // console.log(months[3]);
+
+    // picking a random number between 0 and the length of our array. 
+    var rn  = Math.floor(Math.random() * months.length);
+    console.log(months[rn]);
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+

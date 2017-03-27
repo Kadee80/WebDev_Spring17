@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Math JS</title>
+  <script type="text/javascript">
+    // Integers - whole numbers
+
+    var x = 15;
+    var y = 35;
+    // var z;
+    // z = 10;
+
+    // Simple math functions with ints and floats
+    // addition +
+    // console.log(x + y);
+    // subtraction -
+    console.log(x - y);
+    // multiplication *
+    console.log(x * y);
+    // division /
+    console.log(x / y);
+
+    // modular operator, % returns the division remainder
+    // this is helpful when we want to use odd/even or every nth number
+    console.log(y % x);
+
+    // just like algebra order of operation matters
+    console.log((x + y)* y - 1);
+
+    // increment by 1
+    console.log(x);
+    x++;
+    console.log(x);
+    x += 1;
+    console.log(x);
+    x = x+1;
+    console.log(x);
+
+    // Floating point numbers and some basic math functions
+    var z = 2.25;
+    // Math.floor will round a float DOWN to the nearest int
+    var zDwn = Math.floor(z);
+    console.log(zDwn);
+    // Math.ceil will round a float UP to the nearest int
+    var zUp = Math.ceil(z);
+    console.log(zUp);
+
+    //Math.round will consider the decimal numbers before rounding
+    var num1 = 2.2;
+    var num2 = 2.7;
+    console.log(Math.round(num1));
+    console.log(Math.round(num2));
+
+    // Math.random() returns a floating point number between 0 and 1
+    var r  = Math.random();
+    console.log(r);
+
+    // We can use math random and math round to get some whole numbers 0 or 1 for a true/false boolean situation.
+    var yn = Math.round(Math.random());
+    if (yn === 0){
+      console.log('false');
+    } else {
+      console.log('true');
+    }
+
+    // Random number within a range between 0 and n
+    // We need a function with a parameter that we can change each time we call the function. 
+    function randNum(n){
+      //  when we declare a variable inside a function, the variable "dies" outside of the function
+      var rn = Math.round(n * Math.random());
+      console.log(rn);
+    }
+    randNum(100);
+
+    // test is a global variable, we can assign it a value within a function
+    var test;
+    // random number within a range use min and max params this time
+    function randNumRange(min, max){
+      var rn = Math.round(Math.random() * (max - min) + min);
+      //console.log(rn);
+      test = rn;
+      // by returning the value of rn at the end of the function we can use this random generated number anywhere within our script tag
+      return rn;
+    }
+    randNumRange(25,35);
+    // console.log(test);
+    console.log(randNumRange(6, 23));
+    // assigning the the returned value of our random range function to a variable the correct way
+    var myRandom  = randNumRange(10, 20);
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+

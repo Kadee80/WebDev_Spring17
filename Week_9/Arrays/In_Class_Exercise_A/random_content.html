@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Content with Arrays</title>
+  <script type="text/javascript">
+    // make an array of image links to chose from at random when the page loads
+    var arrImg = [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hausziege_04.jpg/220px-Hausziege_04.jpg", 
+      "http://static.tumblr.com/b851d5d46044179a14f230c806ba4400/ef531vv/Ezkn7armo/tumblr_static_46615d360dkwo4g8c008o0gk0.png", 
+      "http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/H-P/pig-full-body.jpg.adapt.945.1.jpg"
+      ];
+
+    var arrLinks = [
+      "https://en.wikipedia.org/wiki/Goat",
+      "https://en.wikipedia.org/wiki/Chicken",
+      "https://en.wikipedia.org/wiki/Pig"
+      ];
+
+    // helper function for picking random numbers in our array
+    function randomIndex(max){
+      return Math.floor(Math.random() * max);
+    }
+
+    // we can write our random image function outside the event listener but we should only call it after the DOM has loaded
+    function loadRandomImage(){
+      var index = randomIndex(arrImg.length);
+      var img = document.getElementById("animal");
+      var link = document.getElementById("dynLink");
+      // console.log(img);
+      img.src = arrImg[index];
+      link.href = arrLinks[index];
+    };
+
+    // wait for the page to finish rendering all DOM elements, then execute anonymous function that contains all of the functions and operations we want to perform on page load
+    document.addEventListener("DOMContentLoaded", function (){
+
+        loadRandomImage();
+
+    });
+
+
+  </script>
+
+  <style type="text/css">
+    img{
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <a href="#" id="dynLink"><img src="" id="animal"/></a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

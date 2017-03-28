@@ -37,14 +37,14 @@
       console.log(i + " : " + months[i]);
     }
 
-    // loop through the months array backwards and delete the last item using pop
-    // for (var i = months.length; i > 0;  i--){
-    //   // pass the deleted item into a temp variable called dm
-    //   var dm = months.pop();
-    //   console.log("Deleted " + dm + " the new array length is " + months.length);
-    // }
-    // this array item no longer exsists and will return undefined
-    // console.log(months[3]);
+    loop through the months array backwards and delete the last item using pop
+    for (var i = months.length; i > 0;  i--){
+      // pass the deleted item into a temp variable called dm
+      var dm = months.pop();
+      console.log("Deleted " + dm + " the new array length is " + months.length);
+    }
+    this array item no longer exsists and will return undefined
+    console.log(months[3]);
 
     // picking a random number between 0 and the length of our array. 
     var rn  = Math.floor(Math.random() * months.length);

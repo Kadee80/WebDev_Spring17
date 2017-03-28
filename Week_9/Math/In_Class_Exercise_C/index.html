@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic Math Operations and Assignment</title>
+    <script type="text/javascript">
+    // integer data type aka whole numbers
+
+    // declare a variable
+    // var x;
+    // assign var x a value
+    // x = 1;
+
+    //declare an assign variable with value in a single statement
+    var x = 15;
+    var y = 35;
+    //addition is with +
+    console.log( x + y );
+    //subtraction is with -
+    console.log( x - y );
+    //division is with /
+    console.log( x / y );
+    //multiplication is with *
+    console.log( x * y );
+
+    // modular operator % it returns the remainder after division
+    // good for applying style or performing an action every nth time
+    console.log( y % x );
+
+    // write longer expressions and it works just like alegrba with order of operations
+    console.log((x + y) * y - 1 );
+
+    // increment and decrement  useful in for loops and in counter situations
+    console.log(x);
+    x ++ ;
+    x = x + 1;
+    x += 1;
+    console.log(x);
+    x += 5;
+    console.log(x);
+    x -= 5;
+    console.log(x);
+    x --;
+    console.log(x);
+
+    // Floating point numbers
+    var z = 2.25;
+    var q = 2.75;
+
+    // round up / down or to nearest using some Math object methods
+
+    // floor always rounds down
+    var zDown = Math.floor(z);
+    console.log(zDown);
+    // ceil always rouds up
+    var zUp =  Math.ceil(z);
+    console.log(zUp);
+    // and round rounds to the nearest whole number
+    console.log(Math.round(z));
+    console.log(Math.round(q));
+
+    // Math.random returns a random float between 0 and 1
+    var r = Math.random();
+    console.log(r)
+
+    // create a true false coin flip function using Math.round and a conditional statement
+
+    function coinFlip() {
+        var yn = Math.round(Math.random());
+
+        if (yn === 0) {
+            alert('HEADS');
+        } else {
+            alert('TAILS');
+        }
+    }
+
+    //coinFlip();
+
+    document.addEventListener('DOMContentLoaded', function(){
+      
+      var btn = document.getElementById('flip-me');
+      console.log(btn);
+
+      btn.addEventListener('click', function(e){
+        console.log(e.target);
+      });
+
+      btn.addEventListener('click', coinFlip);
+
+    });
+
+    // what if we want a random number between 0 and 10? 
+    function randNum(max){
+      var rn = Math.round(max * Math.random());
+      alert(rn);
+
+    }
+    randNum(50);
+
+    // what is we want a random number within a min max range?
+    function randNumRange(min, max){
+      var rn = Math.round(Math.random() * (max - min) + min);
+      // use return to pass back a value when function is called
+      return rn
+    }
+
+    var myRand = randNumRange(45,73);
+    console.log(myRand);
+    var yourRand = randNumRange(100,1000);
+    console.log(yourRand);
+
+    </script>
+</head>
+
+<body>
+  <button id="flip-me">Flip a Coin!</button>
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+

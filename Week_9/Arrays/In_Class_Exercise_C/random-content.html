@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Content using an array</title>
+  <script type="text/javascript">
+    var arrImg = [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hausziege_04.jpg/220px-Hausziege_04.jpg",
+      "http://combiboilersleeds.com/images/hen/hen-1.jpg",
+      "http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/H-P/pig-young-closeup.jpg.adapt.945.1.jpg"
+    ];
+
+    var arrLink = [
+      "https://en.wikipedia.org/wiki/Goat",
+      "https://en.wikipedia.org/wiki/Chicken",
+      "https://en.wikipedia.org/wiki/Pig"
+    ];
+
+    // random helper function
+    function randNum(max){
+      var rn = Math.floor(max * Math.random());
+      return rn
+    }
+
+    function loadRandomImage () {
+      var index = randNum(arrImg.length);
+      var img = document.getElementById('dyn-img');
+      var link = document.getElementById('dyn-link');
+      img.src = arrImg[index];
+      link.href = arrLink[index];
+    }
+
+    document.addEventListener('DOMContentLoaded', loadRandomImage);
+
+  </script>
+</head>
+<body>
+
+  <a href="#" target="_blank" id="dyn-link"><img src="" id="dyn-img"/></a>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

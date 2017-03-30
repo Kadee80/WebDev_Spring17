@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tip Calculator</title>
+    <style type="text/css">
+    div.well {
+        background-color: #DDD;
+        border-radius: 10px;
+        min-height: 20px;
+        width: 200px;
+        padding: 10px;
+    }
+    </style>
+    <script type="text/javascript">
+    //wait for page to finish rendering and add an event listener to our button
+    document.addEventListener('DOMContentLoaded', function() {
+        //we only need to grab this button once, rather than storing it as a variable we can just grab
+        // it ad add the event listener by chaining 2 methods/fuction
+        document.getElementById('tipBtn').addEventListener('click', calcTip);
+    });
+
+    function calcTip() {
+        var b = document.getElementById('bill').value;
+        var arrTip = document.getElementsByName('tip');
+        var result = document.getElementById('tipOutput');
+        var p;
+
+        // convert our strings from input values to floats
+        b = parseFloat(b);
+
+        // loop through the array of inputs and find the one that is checked
+        for (var i = 0; i < arrTip.length; i++) {
+            // if input in slot i of array of inputs is checked, assign its value for our percentage variable
+            if (arrTip[i].checked) {
+                p = arrTip[i].value;
+                break;
+            }
+        }
+        p = parseFloat(p);
+        var tip = b * p;
+        b = moneyRound(b);
+        tip = moneyRound(tip);
+        var total = b + tip
+        console.log(tip);
+
+        // grab out output div
+        output = document.getElementById('tipOutput');
+        //make sure there are no old messages in out output div
+        output.innerHTML = '';
+        // creat 3 empty pararaphs in our dom
+        var p1 = document.createElement('P');
+        var p2 = document.createElement('P');
+        var p3 = document.createElement('P');
+        // created nodes of text for messages to append inside our p
+        var t1 = document.createTextNode('Bill is: ' + b);
+        var t2 = document.createTextNode('Tip is: ' + tip);
+        var t3 = document.createTextNode('Total: ' + total);
+
+        //append the text nodes to the proper ps
+        p1.appendChild(t1);
+        p2.appendChild(t2);
+        p3.appendChild(t3);
+        //append ps with proper text to the output div
+        output.appendChild(p1);
+        output.appendChild(p2);
+        output.appendChild(p3);
+
+    }
+    // helper function to truncate longer decimals to the nearest 100th
+    function moneyRound(num) {
+        var roundNum = Math.ceil(num * 100) / 100;
+        return roundNum;
+    }
+    </script>
+</head>
+
+<body>
+    <h1>Tip Calculator</h1>
+    <form>
+        <label for="bill">Bill: </label>
+        <input type="number" name="bill" id="bill" min="0" step="0.01" required>
+        <br>
+        <p>Select your tip percentage:</p>
+        <label>
+            <input type="radio" name="tip" value="0.05"> 5%
+        </label>
+        <label>
+            <input type="radio" name="tip" value="0.10" checked> 10%
+        </label>
+        <label>
+            <input type="radio" name="tip" value="0.15"> 15%
+        </label>
+        <label>
+            <input type="radio" name="tip" value="0.20"> 20%
+        </label>
+        <br>
+        <!-- this is type button for our example so the page does not refresh, it should be type="sumbit" when posting form data to a script or database etc. -->
+        <button type="button" class="btn" id="tipBtn">Calculate Tip</button>
+    </form>
+    <div class="well" id="tipOutput">
+    </div>
+</body>
+
+</html>

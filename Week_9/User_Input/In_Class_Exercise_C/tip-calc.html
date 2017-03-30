@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tip Calculator</title>
+    <style type="text/css">
+    div.container {
+        width: 300px;
+        margin: 0 auto;
+        line-height: 40px;
+    }
+    
+    div.well {
+        border-radius: 10px;
+        background-color: #ddd;
+        min-height: 100px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <label for="bill">Enter the value of your bill here:</label>
+            <br>
+            <input type="number" name="bill" id="bill">
+            <br>
+            <!-- Radio Group -->
+            <label>
+                <input type="radio" name="tip" value="0.05"> 5%
+            </label>
+            <label>
+                <input type="radio" name="tip" value="0.10"> 10%
+            </label>
+            <label>
+                <input type="radio" name="tip" value="0.15"> 15%
+            </label>
+            <label>
+                <input type="radio" name="tip" value="0.20"> 20%
+            </label>
+            <button type="button">Calculate Tip</button>
+        </form>
+        <div class="well">
+          
+        </div>
+    </div>
+</body>
+
+</html>

@@ -55,12 +55,21 @@
         }]
     };
 
-    1- Tony’s third pet
-    2- Billy’s last name
-    3- The size of the others array
-    4- The first name of everyone in the others array (for loop and array.length is needed)
-    5- Tara’s first pet
-    6- Bonus add another student(object) to the others array
+    // 1- Tony’s third pet
+    console.log(myClass.me.pets[2])
+    // 2- Billy’s last name
+    console.log(myClass.others[1].lastName)
+    // 3- The size of the others array
+    console.log(myClass.others.length)
+    // 4- The first name of everyone in the others array (for loop and array.length is needed)
+    for (var i = 0; i < myClass.others.length; i++){
+      console.log(myClass.others[i].firstName);
+    }
+    // 5- Tara’s first pet
+    console.log(myClass.others[2].pets[0]);
+    // 6- Bonus add another student(object) to the others array
+    myClass.others.push({firstName: 'Luvneesh', lastName: 'Mugrai', pets: ['eagle']});
+    console.log(myClass);
 
     </script>
 </head>

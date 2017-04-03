@@ -10,27 +10,29 @@
         pets: ['dog', 'cat', 'iguana']
     }
 
-    console.log(customer);
+    // console.log(customer);
     // access our customers first name using dot notation
-    console.log(customer.firstName);
+    // console.log(customer.firstName);
     // how would we get the last name?
-    console.log(customer.lastName);
+    // console.log(customer.lastName);
     // pass in a string as our 'index' in square brackets (this is neccessary when we have keys with - in them)
-    console.log(customer['lastName']);
+    // console.log(customer['lastName']);
     // what if we want tony's second pet?
-    console.log(customer.pets[1])
+    // console.log(customer.pets[1])
         // log out all of tony's pets
     for (var i = 0; i < customer.pets.length; i++) {
-        console.log(customer.pets[i]);
+        // console.log(customer.pets[i]);
     }
 
     // we can also add a new key value pair to our object
     customer.age = 45;
-    console.log(customer);
+    // console.log(customer);
+    // we can update an exisiting value by accessing its key and assigning a new value
     customer.lastName = 'Bologna';
-    console.log(customer);
+    // console.log(customer);
+    // if we want to add to an array inside our object we have to use .push()
     customer.pets.push('chicken');
-    console.log(customer);
+    // console.log(customer);
 
     var myClass = {
         me: {

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JQ vs JS</title>
+  <!-- load jq first before trying to use it -->
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <!-- now write our own custom scripts after it is loaded -->
+  <script type="text/javascript">
+    // onload listener JS
+    document.addEventListener('DOMContentLoaded', function(){
+
+    });
+   
+    // onLoad listener in JQ
+    $(document).ready(function(){
+      // do stuff here when the page loads
+      // getElementById add event listener on click change the inner html
+      $('#myID').click(function(){
+
+        // $('#myID').html('You Clicked Me');
+        $(this).html('You Clicked Me');
+      });
+
+      // document.getElementsByTagName('P') = $('p')
+      // returns an array of all elements with the tag P
+      console.log($('p'));
+
+      //document.getElementsByClassName('goat') = $('.goat')
+      //  returns an array of all elements with the class name goat
+      console.log($('.goat'));
+
+      // document.querySelector('li'); = $('li:first')
+      console.log($('li:first'));
+
+    });
+    
+  </script>
+
+</head>
+<body>
+  
+<div id="myID">This is a div to grab with a jquery selector</div>
+
+<p class="goat">Paragraph 1</p>
+<p class="goat">Paragraph 2</p>
+<p class="goat">Paragraph 3</p>
+<p class="goat">Paragraph 4</p>
+
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+  
+</body>
+</html>

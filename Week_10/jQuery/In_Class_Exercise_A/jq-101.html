@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JQ Hide Slide and Toggle</title>
+    <!-- Latest compiled and minified CSS BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- We are using bootstrap buttons http://getbootstrap.com/css/#buttons -->
+
+</head>
+
+<body>
+    <h1>Hello jQuery</h1>
+
+    <p id="mouseMe">This is a paragraph with mouse enter and mouse leave events attached to it via jquery</p>
+
+    <button class="btn btn-default" id="dblClick">Double Click Me</button>
+
+    <h2>HIDE</h2>
+    <button class="btn btn-danger" id="hideMe">Hide</button>
+    <button class="btn btn-success" id="showMe">Show</button>
+    <button class="btn btn-warning" id="toggleHide">Toggle Visibility</button>
+
+    <div class="well">
+      <p>This is a div we will hide using the buttons above. </p>
+    </div>
+    
+    <h2>FADE</h2>
+    <button class="btn btn-danger" id="fadeOut">Fade Out</button>
+    <button class="btn btn-success" id="fadeIn">Fade In</button>
+    <button class="btn btn-warning" id="toggleFade">Fade Out</button>
+
+    <div class="well" id="fadeMe">
+      <p>This is a div we will fade in and out using the buttons above. </p>
+    </div>
+
+    <h2>SLIDE</h2>
+    <button class="btn btn-danger" id="slideUp">Slide Up</button>
+    <button class="btn btn-success" id="slideDown">Slide Down</button>
+    <button class="btn btn-warning" id="toggleSlide">Toggle Slide</button>
+
+    <div class="well">
+      <p>This is a div we will fade in and out using the buttons above. </p>
+    </div>
+
+
+    <!-- Link to Stable JQ Version -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+    // on load event listener jq style
+      $(document).ready(function(){
+
+        // double event listener
+        $('#mouseMe').on(
+            {
+            mouseenter: function() {
+              console.log('you moused over me!');
+            },
+            mouseleave: function() {
+              console.log('you moused away from me!')
+            }
+          });
+
+        // double click event listener
+        $('#dblClick').dblclick(function(){
+          alert('You Double Clicked this Button!')
+        });
+
+
+        //event listeners for hide and show     
+        $('#hideMe').click(function(){
+          $('.well:first').hide();
+        });
+
+        $('#showMe').click(function(){
+          $('.well:first').show();
+        });
+
+        $('#toggleHide').click(function(){
+          $('.well:first').toggle();
+        });
+
+        // Fade In and Out Toggle
+        $('#fadeOut').click(function(){
+          $('#fadeMe').fadeOut(2000);
+        });
+
+        $('#fadeIn').click(function(){
+          $('#fadeMe').fadeIn('slow');
+        });
+
+        $('#toggleFade').click(function(){
+          $('#fadeMe').fadeToggle('slow');
+        });
+
+        // Slide up and Down Toggle
+        $('#slideUp').click(function(){
+          $('.well:last').slideUp(100);
+        });
+
+        $('#slideDown').click(function(){
+          $('.well:last').slideDown(200);
+        });
+
+        $('#toggleSlide').click(function(){
+          $('.well:last').slideToggle('fast');
+        });
+
+
+      });
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

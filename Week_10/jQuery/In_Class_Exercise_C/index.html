@@ -6,7 +6,8 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <style type="text/css">
-    div {
+    /* make every div that does NOT have the class well have a blue bg and clip the background to avoid padding */
+    div:not(.well) {
         background-color: rgba(0, 0, 255, 0.1);
         /* border: 1px solid blue; */
         /* this only highlights the content and will not make the padding area have a background color */
@@ -18,7 +19,6 @@
 
 <body>
     <div class="container-fluid">
-        
         <h1>Class Containers Responsive</h1>
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-3">
@@ -68,7 +68,7 @@
             </div>
           </div>
         </div>
-        </div> <!-- End Container -->
+    </div> <!-- End Container -->
 
   <div class="container" style="margin-top: 50px">
     <h2>Hide Show Toggle</h2>
@@ -100,20 +100,83 @@
 
     <div class="well">
       <p>This is a div with the class well, We are going to use $.slideUp() to make it disappear. We are going to use $('.well:last') as our selector</p>
+      <br><br>
     </div>
   </div>
 
+  <div class="container">
+    <p id="mouseMe">This paragraph is going to have 2 event listeners attached to it at once using jquery. mouse over and mouse out to see whats up!</p>
+  </div>
+
+
+<!-- Always load jquery before trying to use it! -->
+<script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  //grab the document object, listen for it to be ready (loaded)
+  $(document).ready(function(){
+
+    // Hide Show Toggle
+    $('#hideMe').click(function(){
+      $('.well:first').hide();
+    });
+
+    $('#showMe').click(function(){
+      $('.well:first').show();
+    });
+
+    $('#toggleHide').click(function(){
+      $('.well:first').toggle();
+    });
+
+    // Fade in and out and toggle fade
+    $('#fadeOut').click(function(){
+      $('#fadeMe').fadeOut(1000);
+    });
+
+    $('#fadeIn').click(function(){
+      $('#fadeMe').fadeIn('slow');
+    });
+
+    $('#toggleFade').click(function(){
+      $('#fadeMe').fadeToggle('slow');
+    });
+
+    //Slide up and Down and toggleSlide
+
+    $('#slideUp').click(function(){
+      $('.well:last').slideUp(2000);
+    });
+
+    $('#slideDown').click(function(){
+      $('.well:last').slideDown('slow');
+    });
+
+    $('#toggleSlide').click(function(){
+      $('.well:last').slideToggle('fast');
+    });
+
+    //double event time....
+    $('#mouseMe').on({
+      mouseenter: function () {
+        console.log('Mouse has entered the paragraph...');
+      },
+      mouseleave: function () {
+        console.log('Mouse has left the paragraph...');
+      },
+      dblclick: function () {
+        alert('Double Clicked!');
+      }
+    });
+  });
 
 
 
 
+</script>
 
-
-
-            <!-- Always load jquery before trying to use it! -->
-            <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-            <!-- Latest compiled and minified JavaScript -->
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 
 </html>

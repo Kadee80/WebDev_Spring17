@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Grid and Nav</title>
+  <!-- Link to minified bootstrap styles -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <!-- if you have some style overrides you link to them after you load bootstrap -->
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and hamburger toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapseThis" aria-expanded="false">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Logo on the left side -->
+      <a class="navbar-brand" href="#">Logo Goes Here</a>
+      <!-- you can use and image here and it will scale-->
+      <!-- use the class navbar-text for anything in your menu that is not clickable -->
+      <p class="navbar-text">Some cool tagline</p>
+    </div><!-- end navbar header -->
+
+    <!-- links on the right -->
+    <!-- Collect the nav links and forms etc that we want to collapse for toggling -->
+    <div class="collapse navbar-collapse" id="collapseThis">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <!-- third link is a dropdown toggle -->
+      <li>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
+        aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </li>
+    </ul>
+    <!-- end navbar collapse wrapper -->
+    </div>
+    
+
+
+  </div>
+</nav>
+
+<!-- Fixed navbar in bootstrap is 50px high by default (unles you change it) so we need to add padding to the container below -->
+<div class="container" style="padding-top:70px">
+  <!-- button triggered modal -->
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#basicModal">Launch Demo Modal</button>
+
+
+    <pre>
+      Heaven stops the nose at it and the moon winks,
+      The bawdy wind that kisses all it meets
+      Is hush'd within the hollow mine of earth,
+      And will not hear it. What committed!
+      Impudent <a href="#" data-toggle="modal" data-target="#define">strumpet!</a>
+    </pre>
+
+
+
+
+  <!-- basic modal wrapper -->
+  <div class="modal fade" id="basicModal" tab-index="-1" role="dialog" aria-labelledby="myModalLabel">
+  <!-- modal positioning -->
+    <div class="modal-dialog" role="document">
+    <!-- modal content -->
+      <div class="modal-content">
+        <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="close">X</button>
+        <h4 class="modal-title" id="myModalLabel">My First Modal</h4>
+        </div>
+
+        <div class="modal-body">
+          <p>Some modal stuff and junk...</p>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-success">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bare minimum for a modal our definition modal-->
+  <div class="modal fade" id="define" tab-index="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <!-- we need this so we can close our modal -->
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="close">X</button>
+        <h4 class="modal-title" >Strumpet</h4>
+          
+        </div>
+        <div class="modal-body">
+          <p>
+            <strong>noun</strong> <em>dated</em>
+            <br>
+            - a female prostitute or a promiscous woman.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+
+
+<!-- load jq before bootstrap js because it uses jquery -->
+<script
+  src="http://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<!-- always link to minified js at the bottom of our body tag -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

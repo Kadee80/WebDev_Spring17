@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Grid and Nav</title>
+  <!-- Link to minified bootstrap styles -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <!-- if you have some style overrides you link to them after you load bootstrap -->
+  <style type="text/css">
+    /* give the divs a  slight background so we can watch the grid system build */
+    div{
+      /* background:  rgba(0, 0, 255, 0.1);
+      background-clip: content-box;
+      border: 1px solid blue; */
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <!-- Logo on the left side -->
+      <a class="navbar-brand" href="#">Logo Goes Here</a>
+      <!-- you can use and image here and it will scale-->
+      <!-- use the class navbar-text for anything in your menu that is not clickable -->
+      <p class="navbar-text">Some cool tagline</p>
+    </div><!-- end navbar header -->
+
+    <!-- links on the right -->
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <!-- third link is a dropdown toggle -->
+      <li>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
+        aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </li>
+    </ul>
+    
+
+
+  </div>
+</nav>
+
+<!-- Fixed navbar in bootstrap is 50px high by default (unles you change it) so we need to add padding to the container below -->
+<div class="container" style="padding-top:50px">
+  <h1>Container and grid responsive</h1>
+  <!-- 12 column grid -->
+  <div class="row">
+    <div class="col-sm-6 col-md-3 col-lg-1"><p>col-sm-6 col-md-3 col-lg-1</p></div>
+    <div class="col-sm-6 col-md-3 col-lg-1"><p>col-sm-6 col-md-3 col-lg-1</p></div>
+    <div class="col-sm-6 col-md-3 col-lg-1"><p>col-sm-6 col-md-3 col-lg-1</p></div>
+    <div class="col-sm-6 col-md-3 col-lg-1"><p>col-sm-6 col-md-3 col-lg-1</p></div>
+  </div>
+  <h2>Offsets</h2>
+  <div class="row">
+    <div class="col-md-4"><p>col-md-4</p></div>
+     <div class="col-md-4 col-md-offset-4"><p>col-md-4 col-md-offset-4</p></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3"><p>col-md-6 col-md-offset-3</p></div>
+  </div>
+  <h2>Nested Grids</h2>
+  <div class="row">  
+    <div class="col-md-8">
+       <h3>Level 1: col-md-8 </h3>
+       <div class="row">
+         <div class="col-md-4"><p>Level 2: col-md-4</p></div>
+         <div class="col-md-4"><p>Level 2: col-md-4</p></div>
+         <div class="col-md-4"><p>Level 2: col-md-4</p></div>
+       </div>
+    </div>
+    <div class="col-md-4">
+       <h3>Level 1: col-md-4 </h3>
+       <div class="row">
+        <div class="col-md-6"><p>Level 2: col-md-6</p></div>
+        <div class="col-md-6"><p>Level 2: col-md-6</p></div>
+       </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- load jq before bootstrap js because it uses jquery -->
+<script
+  src="http://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<!-- always link to minified js at the bottom of our body tag -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

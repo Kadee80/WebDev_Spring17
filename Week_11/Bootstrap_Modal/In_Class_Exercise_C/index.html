@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap Navbar</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class='container-fluid'>
+            <!-- Brand Logo and tagline -->
+            <div class="navbar-header">
+                <!-- Brand and toggle hamburger group for better mobile display -->
+                <!-- conditionally display hamburger -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapseMenu" aria-expanded="false">
+                    <!-- draw the burger -->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- This will style text or an image link as the logo/home link -->
+                <a class="navbar-brand">SomeLogo</a>
+                <p class="navbar-text">This is an awesome tagline</p>
+            </div>
+            <!-- Another set of navigation on the right -->
+            <!-- collect the nav links forms and other content we want to hide show on mobile with the hamburger -->
+            <div class="collapse navbar-collapse" id="collapseMenu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Link 3 Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Drop Link 1</a></li>
+                            <li><a href="#">Drop Link 2</a></li>
+                            <li class="divider" role="separator"></li>
+                            <li><a href="#">Drop Link 3</a></li>
+                            <li><a href="#">Drop Link 4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Fixed navbar will cover the first 50px of our page, to make sure all of our content is seen lets add an inline style that adds some top padding to our first container -->
+    <div class="container" style="padding-top:70px;">
+    
+
+    <!-- Button to open our first modal -->
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#btnModal">Open Modal</button>
+      <!-- the preformatted text tag respects line breaks tabs and spaces -->
+      <pre>
+Heaven stops the nose at it and the moon winks,
+The bawdy wind that kisses all it meets
+Is hush'd within the hollow mine of earth,
+And will not hear it. What committed!
+Impudent <a href="#" data-toggle="modal" data-target="#strumpetModal">strumpet</a>!
+      </pre>
+    
+
+    <!-- Modal (button opens this one) -->
+    <!-- This is the modal wrapper -->
+      <div class="modal fade" id="btnModal" tab-index="-1" role="dialog" aria-labelledby="btnModalLabel">
+        <!-- actual modal box -->
+        <div class="modal-dialog" role="document">
+          <!-- Modal content -->
+          <div class="modal-content">
+            
+             <!-- Modal Header -->
+             <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">X</button>
+               <h4 class="modal-title" id="btnModalLabel">My First Modal</h4>
+             </div>
+             
+             <!-- Modal Body -->
+             <div class="modal-body">
+               <p>Are you sure you want to delete your post?</p>
+             </div>
+
+             <!-- Modal Footer -->
+             <div class="modal-footer">
+               <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+               <button class="btn btn-danger">Delete</button>
+             </div>
+          </div>       
+        </div>
+      </div>
+
+      <!-- Strumpet Modal -->
+      <div class="modal fade" id="strumpetModal" tab-index="-1" role="dialog" aria-labelledby="strumpetModalLabel">
+         <div class="modal-dialog modal-sm" role="document">
+          <div class='modal-content'>
+
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">X</button>
+               <h4 class="modal-title" id="strumpetModalLabel">Strumpet - </h4>
+             </div>
+
+             <div class="modal-body">
+               <p><strong>noun</strong> <em>dated</em>
+                <br>
+                - a female prostitue or permiscuous woman.
+               </p>
+             </div>
+
+          </div>
+         </div>
+      </div>
+
+
+
+
+    </div>
+
+
+
+
+
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

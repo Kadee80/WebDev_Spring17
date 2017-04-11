@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap Navbar</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <style type="text/css">
+      .navbar-default{
+        background-color: #006fff;
+      }
+      .navbar-default .navbar-nav>li>a,
+      .navbar-default .navbar-header a, 
+      .navbar-default .navbar-header p{
+        color: white;
+      }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class='container-fluid'>
+            <!-- Brand Logo and tagline -->
+            <div class="navbar-header">
+                <!-- Brand and toggle hamburger group for better mobile display -->
+                <!-- conditionally display hamburger -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapseMenu" aria-expanded="false">
+                    <!-- draw the burger -->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- This will style text or an image link as the logo/home link -->
+                <a class="navbar-brand">SomeLogo</a>
+                <p class="navbar-text">This is an awesome tagline</p>
+            </div>
+            <!-- Another set of navigation on the right -->
+            <!-- collect the nav links forms and other content we want to hide show on mobile with the hamburger -->
+            <div class="collapse navbar-collapse" id="collapseMenu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Link 3 Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Drop Link 1</a></li>
+                            <li><a href="#">Drop Link 2</a></li>
+                            <li class="divider" role="separator"></li>
+                            <li><a href="#">Drop Link 3</a></li>
+                            <li><a href="#">Drop Link 4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

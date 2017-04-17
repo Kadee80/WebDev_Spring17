@@ -14,6 +14,24 @@ Today all 19 of you will be presenting your final project proposals.
 
 2- Submit a blog post and provide me with a link either via github or email.
 
+### Section A-
+- Luvneesh
+- Valeria
+- Irka
+- Alejandra
+- Adam
+- Leo
+- Nicholas
+- Lauren
+- Asim
+- Jarret
+- Jason
+- Mounir
+- Gilbert
+- Brendon
+
+- Jane
+- Stephanie
 
 # HW Week 12:
 

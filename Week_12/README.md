@@ -17,7 +17,7 @@ Today all 19 of you will be presenting your final project proposals.
 ### Section A-
 - Luvneesh
 - Valeria
-- Irka
+- Ikra
 - Alejandra
 - Adam
 - Leo

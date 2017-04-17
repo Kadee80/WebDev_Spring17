@@ -14,25 +14,8 @@ Today all 19 of you will be presenting your final project proposals.
 
 2- Submit a blog post and provide me with a link either via github or email.
 
+
 # HW Week 12:
 
 Get to work on your final projects!
 
-[Install Ruby](https://www.ruby-lang.org/en/documentation/installation/) on your computers before Monday's class. 
-[Install SASS](http://sass-lang.com/install)
-
-*Spoiler, we are going to take a look at SASS next week!*
-
-###Install SASS using command line:
-
-```bash
-gem install sass
-```
-If  it does not install, and you receive an error you need to install as admin on your computer. `sudo` will always prompt you for your computers password:
-```bash
-sudo gem install sass
-```
-Check your version and confirm SASS is installed:
-```bash
-sass -v
-```

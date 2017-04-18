@@ -35,6 +35,7 @@ Today all 19 of you will be presenting your final project proposals.
 
 ### Section C-
 
+- Lillian
 - Natalia
 - Greta
 - Edan
@@ -51,7 +52,6 @@ Today all 19 of you will be presenting your final project proposals.
 - Monjur
 - Hung
 - David
-- Lillian
 - Michelle
 - Michael
 

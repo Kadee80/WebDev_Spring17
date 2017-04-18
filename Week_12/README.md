@@ -33,6 +33,28 @@ Today all 19 of you will be presenting your final project proposals.
 - Jane
 - Stephanie
 
+### Section C-
+
+- Natalia
+- Greta
+- Edan
+- Danny
+- Hyun
+- Arnav
+- Kevin F
+- Mahindra
+- Huiwah
+- Kevin L
+- Maria
+- Matthew C
+- Joris
+- Monjur
+- Hung
+- David
+- Lillian
+- Michelle
+- Michael
+
 # HW Week 12:
 
 Get to work on your final projects!

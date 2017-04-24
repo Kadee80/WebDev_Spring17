@@ -123,6 +123,25 @@ $(document).ready(function() {
     TweenLite.to(this, 0.5, {className: '-=active'});
   });
 
+  // Using jQuery .offset()  to get the position of each floor div
+  //console.log( $('#floor1Panel').offset().top );
+
+  $floor5btn.attr('data-scrollPos', $('#floor5Panel').offset().top);
+  $floor4btn.attr('data-scrollPos', $('#floor4Panel').offset().top);
+  $floor3btn.attr('data-scrollPos', $('#floor3Panel').offset().top);
+  $floor2btn.attr('data-scrollPos', $('#floor2Panel').offset().top);
+  $floor1btn.attr('data-scrollPos', $('#floor1Panel').offset().top);
+
+  // call a function on click to each of our nav buttons from our li array
+  $navButtons.click(function(){
+    var myScrollPosition  = $(this).attr('data-scrollPos');
+    //console.log(myScrollPosition);
+    TweenLite.to(window, 2, { scrollTo: myScrollPosition, ease: Back.easeOut });
+  })
+
+  var initialFloor = $('#floor1btn').attr('data-scrollPos');
+
+  TweenLite.to(window, 1, {scrollTo: initialFloor});
 
 });
 

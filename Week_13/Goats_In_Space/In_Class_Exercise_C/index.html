@@ -4,6 +4,32 @@
 <head>
     <title>GOATS IN SPACE!</title>
     <link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body{
+            background-color: black;
+            margin: 10%;
+            /* overflow: hidden; */
+        }
+        .img{
+            width: 100px;
+            height: 100px;
+        }
+
+        .box{
+            float: right;
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            margin: 10px;
+        }
+
+        #wrapper{
+            width: 510px;
+            margin: 0 auto;
+        }
+
+
+    </style>
 
 </head>
 
@@ -43,11 +69,39 @@
     <!-- Our custom script -->
     <script type="text/javascript">
     // instantiate a new timeline object and add some parameters
+    tl = new TimelineMax({
+            delay:0.5,
+            repeat: -1,
+        });
 
     //add explode label 15 seconds after reset animation is done
+    tl.add('explode', '+=8');
 
+    
     //IMG timeline
+
     //for each image in our array of .img elements call this function and gain access to its index in the array as the parameter index
+    $('.img').each(function(index){
+        tl.from(this, 5, {
+            delay:0.1,
+            scale:-1,
+            x: randomNumber(-1000, 2000),
+            y: randomNumber(-500, 1000),
+            z: -1,
+            opacity: 0,
+            rotation: randomNumber(-360, 360),
+        }, Math.random()* 1.5);
+
+        tl.to(this, 5, {
+            x: randomNumber(-1000, 2000),
+            y: randomNumber(-500, 1000),
+            z: randomNumber(100, 500),
+            opacity:0,
+            rotation: randomNumber(-360,360),
+            rotateX: randomNumber(-360,360),
+            rotateY: randomNumber(-360,360)
+        }, 'explode+=' + Math.random() * .5);
+    });
     
     //click to center a goat
     

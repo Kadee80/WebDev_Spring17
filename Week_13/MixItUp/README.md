@@ -6,8 +6,7 @@ I highly reccomend taking a moment to go through thier getting started tutorial 
 
 #### Links to Docs and Example We Will Reference:
 
-[Getting Started](https://mixitup.kunkalabs.com/learn/tutorial/get-started/)
+[Getting Started](https://www.kunkalabs.com/mixitup/docs/get-started/)
 
-[Advanced Filtering](https://mixitup.kunkalabs.com/learn/tutorial/advanced-filtering/)
+[Advanced Filtering](https://www.kunkalabs.com/tutorials/filtering-and-sorting-on-load/)
 
-[Config Object](https://mixitup.kunkalabs.com/docs/#configuration-object)

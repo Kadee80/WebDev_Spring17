@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mix It Up!</title>
+    <style type="text/css">
+      /* Global Styles */
+      *{
+        /* border box  will not add extra dimensions to your width/height when you add padding or border. MARGINS still need to be calculated*/
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body, button{
+        font-family: 'Helvetica Neue', arial, sans-serif;
+      }
+
+      /* Container and Content Styles */
+      .container{
+        position: relative;
+        padding:  2% 2% 0;
+        text-align: justify;
+        font-size: 0.1px;
+        background: #DDD;
+        min-height: 200px;
+      }
+
+      /* This next style is needed for spacing between mix elements */
+      .container:after{
+        content: '';
+        display: inline-block;
+        width: 100%;
+      }
+
+      /* Mobile First Styling, this will apply unless the screen is a certain width or larger */
+      .container .mix, 
+      .container .gap{
+        display: inline-block;
+        width:  100%;
+      }
+
+      .container .mix{
+        text-align: left;
+        background-color: #AAA;
+        margin-bottom: 2%;
+        border-radius: 8px;
+        /* display: none; */
+      }
+
+      .container .mix:after{
+        content: attr(class);
+        color: white;
+        font-size: 16px;
+        display: inline-block;
+        vertical-align: top;
+        padding: 4% 6%;
+        font-weight: 200;
+      }
+
+      /* this is optional but we are adding some extra padding so that our boxes are larger than out text */
+
+      .container .mix:before{
+        content: '';
+        display: inline-block;
+        padding-top: 60%;
+      }
+
+      /* Since we are designing mobile first our desktop/tablet sizes need to live in a media query */
+
+      
+
+    </style>
+</head>
+
+<body>
+    <!-- content to filter and sort -->
+    <div id="container" class="container">
+        <div class="mix dogs cats"></div>
+        <div class="mix cats"></div>
+        <div class="mix cats goats"></div>
+        <div class="mix dogs cats goats"></div>
+        <div class="mix goats"></div>
+        <!-- These gap divs are put here to make sure your elements aways stack with the correct spacing. If we remove them we can see how it changes behavior -->
+        <div class="gap"></div>
+        <div class="gap"></div>
+
+    </div>
+
+
+
+
+    <!-- Link to Stable JQ -->
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+    <script type="text/javascript">
+    //shorthand for $(document).ready(function(){});
+    $(function() {
+
+    });
+    </script>
+</body>
+
+</html>

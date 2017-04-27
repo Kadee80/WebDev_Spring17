@@ -2,12 +2,61 @@
 <html>
 
 <head>
-    <title>Mix It Up!</title>
+    <title>Mix It Up</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="jquery.mixitup.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        //we can also add event listeners to individual elements manually. clicking the reset button will show all categories
+        $('#reset').click(function(event) {
+            $('#Container').mixItUp('filter', '')
+        });
+
+        //$('#Container').mixItUp();
+
+        // $('#Container').mixItUp({load: {
+        //         filter: '' //default filter, show none, try changing this to all
+        //     }});
+
+        $('#Container').mixItUp({
+            load: {
+                filter: '' //default filter, show none, try changing this to all
+            },
+            controls: {
+                toggleFilterButtons: true, // allow more than 1 filter to be selected at once, true changing this to false and see what happens
+                toggleLogic: 'and' // when more than one button is selected only show the ones that have all selected filters, try changing this to or
+            },
+            // change the default animation, see settings here: https://mixitup.kunkalabs.com/docs/#group-animation
+            animation: {
+                enable: true,
+                effects: 'fade scale',
+                duration: 500,
+                easing: 'ease',
+                perspectiveDistance: '3000px',
+                perspectiveOrigin: '50% 50%',
+                queue: true,
+                queueLimit: 1,
+                animateChangeLayout: false,
+                animateResizeContainer: true,
+                animateResizeTargets: false,
+                staggerSequence: null,
+                reverseOut: false,
+            },
+            callbacks: {
+                onMixEnd: function(state) {
+                    console.log(state);
+                    //console.log(state.activeFilter)//just an example callback, like when the sorting and filtering has been completed, do this function, state is an object mix it up uses to keep track of selected filters etc, you can read more about it here:
+                    //https://mixitup.kunkalabs.com/docs/#state-object
+                }
+            }
+        });
+    });
+    </script>
     <style type="text/css">
-    /* Global Styles */
-    
+
+    /* GLOBAL STYLES */
+
     * {
-        /* border box  will not add extra dimensions to your width/height when you add padding or border. MARGINS still need to be calculated*/
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -17,11 +66,12 @@
     button {
         font-family: 'Helvetica Neue', arial, sans-serif;
     }
-    /* Controls */
+
+    /* CONTROLS */
     
     .controls {
         padding: 1%;
-        background-color: #111;
+        background: #111;
         color: white;
     }
     
@@ -37,12 +87,13 @@
         border: 0;
         color: #EEE;
         font-size: 16px;
+        font-weight: 100;
         border-radius: 4px;
         cursor: pointer;
     }
     
     button.active {
-        background-color: #999;
+        background: #999;
     }
     
     button:focus {
@@ -52,8 +103,9 @@
     button + label {
         margin-left: 1em;
     }
-    /* Container and Content Styles */
     
+    /* Mix Styles */
+
     .container {
         position: relative;
         padding: 2% 2% 0;
@@ -61,16 +113,17 @@
         font-size: 0.1px;
         background: #DDD;
         min-height: 200px;
+        /* -webkit-backface-visibility: hidden; */
     }
-    /* This next style is needed for spacing between mix elements */
     
+    /* This is needed for spacing between mix elements  */
     .container:after {
         content: '';
         display: inline-block;
         width: 100%;
     }
-    /* Mobile First Styling, this will apply unless the screen is a certain width or larger */
     
+    /* Mobile First Styling method, this will apply unless a screen of a certain min-width is detected */
     .container .mix,
     .container .gap {
         display: inline-block;
@@ -79,71 +132,78 @@
     
     .container .mix {
         text-align: left;
-        background-color: #AAA;
+        background: #AAA;
         margin-bottom: 2%;
         border-radius: 8px;
         display: none;
     }
     
     .container .mix:after {
+        /* We can echo out a data-attribute or class here */
+        /* content: attr(data-myorder); */
         content: attr(class);
         color: white;
         font-size: 16px;
         display: inline-block;
         vertical-align: top;
         padding: 4% 6%;
-        font-weight: 200;
+        font-weight: 300;
     }
-    /* this is optional but we are adding some extra padding so that our boxes are larger than out text */
+
+    /* This is optional, we are just adding some extra padding so our boxes are larger than our text, we could also use min-height on .mix elements*/
     
     .container .mix:before {
         content: '';
         display: inline-block;
         padding-top: 60%;
     }
-
-    .container .fail-message{
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      padding: 2%;
-      text-align: center
-    }
-
-    .container.fail .fail-message{
-      opacity: 1;
-      pointer-events: all
-    }
-
-    .container .fail-message:before{
-      content: '';
-      display: inline-block;
-      height: 100%;
-      vertical-align: middle;
-    }
-
-    .container.fail .fail-message span{
-       display: inline-block;
-       font-weight: 500;
-       color: #555;
-       font-size: 20px;
-       vertical-align: middle;
+    
+    .container .fail-message {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 2%;
+        text-align: center;
+        /* Hide by default, only show when no matches, this is part of mix-it-up */
+        opacity: 0;
+        pointer-events: none;
     }
     
-    /* Since we are designing mobile first our desktop/tablet sizes need to live in a media query */
-    /* Larger Phones and Tablets 2 items per row */
+    /* When the .fail class is added to container, show our error message */
+    .container.fail .fail-message {
+        opacity: 1;
+        pointer-events: all;
+    }
     
+    .container .fail-message:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+    
+    .container .fail-message span {
+        display: inline-block;
+        font-weight: 500;
+        color: #333;
+        font-size: 20px;
+        vertical-align: middle;
+    }
+
+    /* Since we are doing mobile first media design in this example, we need to explicitly say what will happen on loarger screens */
+
+    /* Larger Phones and Tablets (2 items per row)*/
     @media all and (min-width: 768px) {
         .container .mix,
         .container .gap {
             width: 48%;
         }
     }
-    /* Desktop Screens  4 items per row*/
-    
-    @media all and (min-width:1024px) {
+
+    /* Desktop (4 items per row) */
+    @media all and (min-width: 1024px) {
         .container .mix,
         .container .gap {
             width: 24%;
@@ -153,76 +213,33 @@
 </head>
 
 <body>
-    <!-- Controls and Filter Buttons -->
     <div class="controls">
-        <label>Filter: </label>
+        <label>Filter:</label>
         <button class="filter" data-filter=".dogs">Dogs</button>
         <button class="filter" data-filter=".cats">Cats</button>
         <button class="filter" data-filter=".goats">Goats</button>
         <button id="reset">Reset</button>
-        <label>Sort: </label>
+        <!-- We can also sort using data-myorder attribute, see settings -->
+        <label>Sort:</label>
         <button class="sort" data-sort="default">Default</button>
         <button class="sort" data-sort="myorder:asc">Ascending</button>
         <button class="sort" data-sort="myorder:desc">Descending</button>
         <button class="sort" data-sort="random">Random</button>
     </div>
-    <!-- content to filter and sort -->
-    <div id="container" class="container">
-    
-    <div class="fail-message"><span>No Items Were Found That Match Your Filters</span></div>
+    <div id="Container" class="container">
+    <!-- Do fail message after advanced filter -->
+        <div class="fail-message"><span>No items were found matching the current filters.</span></div>
 
-
+        <!-- Content to filter and sort -->
         <div class="mix dogs cats" data-myorder="1"></div>
         <div class="mix cats" data-myorder="2"></div>
-        <div class="mix cats goats" data-myorder="3"></div>
+        <div class="mix dogs cats" data-myorder="3"></div>
         <div class="mix dogs goats" data-myorder="4"></div>
         <div class="mix goats" data-myorder="5"></div>
-        <!-- These gap divs are put here to make sure your elements aways stack with the correct spacing. If we remove them we can see how it changes behavior -->
+        <!-- These gap divs are put here to make sure your elements always stack with the correct spacing, try removing them, and see how spacing changes with different layouts -->
         <div class="gap"></div>
         <div class="gap"></div>
     </div>
-    <!-- Link to Stable JQ -->
-    <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-    <script type="text/javascript">
-    //shorthand for $(document).ready(function(){});
-    $(function() {
-
-                $('#reset').click(function(event) {
-                    $('#container').mixItUp('filter', 'all');
-                });
-
-                $('#container').mixItUp({
-                    load: {
-                        filter: '.dogs' //default filter, change to all to show all on load
-                    },
-                    controls:{
-                      toggleFilterButtons: true, //allows more than one filter to be selected at once/ change this to false and see what happens
-                      toggleLogic: 'and' //when more than one button is selected at a time it will only show the elements that have all the classes selected try changing to or
-                    },
-                    // https://github.com/patrickkunka/mixitup/blob/v2/docs/api-methods.md#setoptions
-                    animation:{
-                      enable:true,
-                      effects: 'fade scale translateX stagger',
-                      duration: 500,
-                      easing: 'ease',
-                      perspectiveDistance: '3px',
-                      queue: true,
-                      queueLimit: 1,
-                      animateChangeLayout: true,
-                      animateResizeContainer: true,
-                    },
-                    callbacks:{
-                      onMixEnd: function(state){
-                        console.log(state.activeFilter);
-                      }
-                    }
-                });
-
-
-    });
-
-    </script>
 </body>
 
 </html>

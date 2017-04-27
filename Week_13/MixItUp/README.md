@@ -6,7 +6,11 @@ I highly reccomend taking a moment to go through thier getting started tutorial 
 
 #### Links to Docs and Example We Will Reference:
 
-[Getting Started](https://www.kunkalabs.com/mixitup/docs/get-started/)
+[Getting Started](https://github.com/patrickkunka/mixitup/blob/v2/docs/version-1-migration.md)
 
-[Advanced Filtering](https://www.kunkalabs.com/tutorials/filtering-and-sorting-on-load/)
+[Advanced Filtering](https://github.com/patrickkunka/mixitup/blob/v2/docs/api-methods.md)
+
+[Config Object](https://github.com/patrickkunka/mixitup/blob/v2/docs/configuration-object.md)
+
+[State](https://github.com/patrickkunka/mixitup/blob/v2/docs/state-object.md)
 

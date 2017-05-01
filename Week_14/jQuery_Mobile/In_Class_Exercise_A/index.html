@@ -8,12 +8,19 @@
     <!-- Default jQuery Mobile Theme CSS -->
     <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <!-- Link to jQuery  NOTE THE VERSION  http://code.jquery.com/jquery/-->
-    <script
+   <script
   src="http://code.jquery.com/jquery-2.1.4.min.js"
   integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="
   crossorigin="anonymous"></script>
+
     <!-- Latest Minified jQuery Mobile -->
     <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style type="text/css">
+      .center{
+        text-align: center;
+      }
+    </style>
 </head>
 
 <body>
@@ -33,22 +40,27 @@
       </div>
 
       <!-- Star Popup Panel -->
-      <div data-role="popup" id="star" data-overlay-theme="b" data-theme="c" data-dismissible="true">
+      <div data-role="popup" id="star" data-overlay-theme="b" data-theme="a" data-dismissible="true">
           <div data-role="header" data-theme="b">
             <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-notext ui-btn-right">Close</a>
             <h1>Heading</h1>
           </div>
 
+          <div data-role="main">
+            <p>CONTENT.......................................................</p>
+          </div>
 
+          <div data-role="footer">
 
-
+            <div class="ui-grid-b center">
+              <div class="ui-block-a"><a data-role="button" data-icon="check" data-iconpos="left" data-theme="b" data-rel="back">YES</a></div>
+              <div class="ui-block-b">
+                <a data-role="button" data-icon="delete" data-iconpos="left" data-theme="b" data-rel="back">NO</a>
+              </div>
+              <div class="ui-block-c"><a data-role="button" data-icon="info" data-iconpos="notext" data-theme="b" data-rel="back">More Info Please</a></div>
+            </div>
+          </div>
       </div>
-
-
-
-
-
-
         <!-- header -->
         <div data-role="header" data-theme="b">
             <!-- Title of page -->
@@ -63,7 +75,7 @@
         <div data-role="footer" data-position="fixed" data-theme="b">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#star" data-icon="star" data-rel="popup" data-position-to="window" data-transition="fade">Star</a></li>
+                    <li><a href="#star" data-icon="star" data-rel="popup" data-position-to="window" data-transition="turn">Star</a></li>
                     <li><a href="#" data-icon="heart">Heart</a></li>
                     <li><a href="#" data-icon="home">Home</a></li>
                 </ul>

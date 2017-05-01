@@ -2,8 +2,6 @@
 
 Today we will take a look at some of jQuery mobile’s core components. jQuery mobile is touch optimized UI framework. We can use jQuery mobile to create a separate mobile version of our website that utilizes touch interactions like swipe to delete an item, change pages, or open hidden content. More importantly, if we wanted to start developing a third party mobile app using Cordova or PhoneGap Build, jQuery Mobile will make it easy to start developing the UI with HTML CSS and jQuery. We will get some of the basics down today.
 
-Before we begin, do a `git pull` of the class repo so you can have the class starter files for this exercise.
-
 ## Getting Started:
 
 The base structure for our first jQuery Mobile page will look pretty familiar. We need to link to:

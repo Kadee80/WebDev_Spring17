@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Mobile</title>
+    <!-- This will scale sizes for mobile/tablet/desktop -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Default jQuery Mobile Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- Link to jQuery  NOTE THE VERSION  http://code.jquery.com/jquery/-->
+    <script
+  src="http://code.jquery.com/jquery-2.1.4.min.js"
+  integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="
+  crossorigin="anonymous"></script>
+    <!-- Latest Minified jQuery Mobile -->
+    <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+    <!-- http://demos.jquerymobile.com/1.4.2/ -->
+    <div data-role="page">
+      
+      <!-- Nav Panel -->
+
+      <div data-role="panel" id="navpanel" data-theme="b" data-display="overlay" data-position="right">
+
+        <ul data-role="listview" data-corners="false">
+          <li><a href="#" data-role="button" data-rel="close" data-icon="delete" data-iconpos="right">CLOSE</a></li>
+          <li><a href="#">Page 1</a></li>
+          <li><a href="#">Page 2</a></li>
+          <li><a href="#">Page 3</a></li>
+        </ul>     
+      </div>
+
+      <!-- Star Popup Panel -->
+      <div data-role="popup" id="star" data-overlay-theme="b" data-theme="c" data-dismissible="true">
+          <div data-role="header" data-theme="b">
+            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-notext ui-btn-right">Close</a>
+            <h1>Heading</h1>
+          </div>
+
+
+
+
+      </div>
+
+
+
+
+
+
+        <!-- header -->
+        <div data-role="header" data-theme="b">
+            <!-- Title of page -->
+            <h1>Hello Header</h1>
+            <!-- button to open nab panel -->
+            <a href="#navpanel" data-role="button" data-icon="bars" data-iconpos="notext" class="ui-btn-right">Menu</a>
+        </div>
+        <!-- main content -->
+        <div data-role="main">
+            <p>Hello Main Content</p>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#star" data-icon="star" data-rel="popup" data-position-to="window" data-transition="fade">Star</a></li>
+                    <li><a href="#" data-icon="heart">Heart</a></li>
+                    <li><a href="#" data-icon="home">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End page 1 -->
+</body>
+
+</html>

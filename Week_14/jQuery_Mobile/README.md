@@ -2,6 +2,12 @@
 
 Today we will take a look at some of jQuery mobile’s core components. jQuery mobile is touch optimized UI framework. We can use jQuery mobile to create a separate mobile version of our website that utilizes touch interactions like swipe to delete an item, change pages, or open hidden content. More importantly, if we wanted to start developing a third party mobile app using Cordova or PhoneGap Build, jQuery Mobile will make it easy to start developing the UI with HTML CSS and jQuery. We will get some of the basics down today.
 
+## Documentation and Examples
+
+jQuery Mobile, much like Bootstrap Documentation offers us a ton of code snippets and examples to help us rapidly protoype app functionality.
+
+[jQuery Mobile Demos](http://demos.jquerymobile.com/1.4.5/)
+
 ## Getting Started:
 
 The base structure for our first jQuery Mobile page will look pretty familiar. We need to link to:
@@ -21,7 +27,7 @@ The base structure for our first jQuery Mobile page will look pretty familiar. W
 
 <!-- Link to Latest Default jQuery Mobile CSS Theme -->
  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-<!-- Link to Latest Stable jQuery -->
+<!-- Link to Latest Stable jQuery that works with jQ mobile -->
  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <!-- Link to Latest Stable jQuery Mobile -->
  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>

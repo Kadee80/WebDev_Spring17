@@ -276,7 +276,7 @@ header nav section#dropdown ul.active li a
 div#nav-collapse.change .bar3 
 ```
 
-## Live Code, Responsive Navbar with SASS and jQuery
+## Live Code, Responsive Navbar with SASS
 
 If we dont want to keep compiling via command line, we can use sass watch:
 

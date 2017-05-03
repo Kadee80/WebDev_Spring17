@@ -1,0 +1,71 @@
+/*****************
+   GRID MIXINS
+*****************/
+
+@import "vars";
+$grid-columns: 12;
+$grid-max-width: 90%;
+$gutter: 1%;
+$breakpoint-mobile: 'only screen and (max-width: 786px), only screen and (max-device-width:768px)';
+$breakpoint-medium: 'only screen and (min-width: 769px), only screen and (min-device-width: 769px)';
+@mixin border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    @include border-box();
+}
+
+@mixin clear-fix {
+    &:after {
+        display: block;
+        clear: both;
+        height: 0;
+        font-size: 0;
+        visibility: hidden;
+    }
+}
+
+@mixin grid-row() {
+    width: 100%;
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin container() {
+    width: 96%;
+    margin: 0 auto;
+    font-size: $basesize;
+    @media #{$breakpoint-medium} {
+        width: $grid-max-width;
+    }
+}
+
+@mixin grid-col($col, $align:top, $first:false, $last:false) {
+    // mobile first
+    width: 98%;
+    display: block;
+    font-size: $basesize;
+    padding: $gutter;
+    vertical-align: top;
+    // calculate column width and spacing for larger screens
+    @media #{$breakpoint-medium} {
+        display: inline-block;
+        width: percentage($col/$grid-columns);
+        //conditional statement for padding when its the first or last in a row
+        padding-left: if($first, 0, $gutter);
+        padding-right: if($last, 0, $gutter);
+        margin-right: -4px;
+    }
+}

@@ -20,6 +20,6 @@ Check your version and confirm SASS is installed:
 sass -v
 
 Watch your folder for changes
-```bash
+```
 sass --watch sass/main.scss:css/main.css
 ```

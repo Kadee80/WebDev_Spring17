@@ -1,5 +1,81 @@
 @import "util";
 
 //import this set style sheet after we write our vars and grid
-//@import "components/navigation";
+@import "components/navigation";
+
+p{
+  line-height: $baseline;
+  margin-bottom: $baseline;
+}
+
+img{
+  width:100%;
+  height:auto;
+}
+
+// general styles
+section.visible-grid{
+  @include grid-row();
+  padding-top:100px;
+  div.wrapper{
+    @include container();
+    aside{
+      @include grid-col(4);
+      ul{
+        list-style-type: none;
+        li{
+          height:$baseline*3;
+          line-height: $baseline*3;
+          background-color: $dark-bg;
+          border-bottom:2px solid $med-bg;
+          transition: all 1s ease;
+          &:hover{
+            background-color: lighten($dark-bg, 10%);
+          }
+          a{
+            color:$light-bg;
+            text-align: center;
+            display: block;
+            text-decoration: none;
+            font-family: $sans;
+            font-weight: $font-weight-thin;
+          }
+
+        }
+      }
+    }
+    article{
+      @include grid-col(8);
+    }
+  }
+}
+
+section.row-bg{
+  @include grid-row();
+  background-color: $primary-brand;
+  div.wrapper{
+    @include container();
+    div.grid-demo{
+      @include grid-col(2);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

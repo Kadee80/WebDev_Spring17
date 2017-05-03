@@ -81,7 +81,7 @@ nav.main-menu {
     }
 }
 
-@media #{$breakpoint-mobile-only} {
+@media #{$breakpoint-mobile} {
     /********* Toggle Mobile Nav Icon**********/
     nav.main-menu {
         div#nav-collapse {

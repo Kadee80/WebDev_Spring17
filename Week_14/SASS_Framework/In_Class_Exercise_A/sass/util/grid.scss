@@ -6,8 +6,8 @@
 $grid-columns: 12;
 $grid-max-width: 90%;
 $gutter: 1%;
-$breakpoint-mobile: 'only screen and (max-width: 786px), only screen and (max-device-width:768px)';
-$breakpoint-medium: 'only screen and (min-width: 769px), only screen and (min-device-width: 769px)';
+$breakpoint-mobile: 'only screen and (max-width: 768px), only screen and (max-device-width:768px)';
+$breakpoint-medium: "only screen and (min-device-width: 769px) and (min-width: 769px)";
 @mixin border-box {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

@@ -2,7 +2,9 @@
 CSS Reset
 --------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:300,400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:300,400,600,700");
 * {
   margin: 0;
   padding: 0; }
@@ -228,7 +230,7 @@ nav.main-menu {
   overflow: hidden;
   transition: height 0.5s linear;
   z-index: 1000; }
-  @media only screen and (min-width: 769px), only screen and (min-device-width: 769px) {
+  @media only screen and (min-device-width: 769px) and (min-width: 769px) {
     nav.main-menu {
       width: 90%; } }
   nav.main-menu div#nav-collapse {
@@ -339,5 +341,115 @@ nav.main-menu {
       background-color: white; }
     nav.main-menu ul ul {
       border-bottom: 1px solid #EEE; } }
+* {
+  font-family: "Open Sans Condensed", sans-serif; }
+
+p {
+  line-height: 24px;
+  font-size: 16px;
+  margin-bottom: 24px; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+section.visible-grid {
+  width: 96%;
+  margin: 0 auto;
+  font-size: 16px;
+  padding-top: 100px; }
+  @media only screen and (min-device-width: 769px) and (min-width: 769px) {
+    section.visible-grid {
+      width: 90%; } }
+  section.visible-grid div.wrapper {
+    width: 100%;
+    *zoom: 1; }
+    section.visible-grid div.wrapper:before, section.visible-grid div.wrapper:after {
+      content: '';
+      display: table; }
+    section.visible-grid div.wrapper:after {
+      clear: both; }
+    section.visible-grid div.wrapper aside {
+      width: 98%;
+      display: block;
+      font-size: 16px;
+      padding: 1%;
+      margin: 0;
+      vertical-align: top; }
+      @media only screen and (min-device-width: 769px) and (min-width: 769px) {
+        section.visible-grid div.wrapper aside {
+          display: inline-block;
+          width: 25%;
+          vertical-align: top;
+          padding-left: 1%;
+          padding-right: 1%;
+          margin-right: -4px; } }
+      section.visible-grid div.wrapper aside ul {
+        list-style-type: none;
+        font-size: 16px; }
+        section.visible-grid div.wrapper aside ul li {
+          height: 72px;
+          background-color: #444;
+          line-height: 72px;
+          border-bottom: white;
+          transition: all 1s ease; }
+          section.visible-grid div.wrapper aside ul li a {
+            color: #EEE;
+            text-align: center;
+            display: block;
+            text-decoration: none;
+            font-family: "Open Sans Condensed", sans-serif;
+            font-weight: 300; }
+          section.visible-grid div.wrapper aside ul li:hover {
+            background-color: #5e5e5e; }
+    section.visible-grid div.wrapper article {
+      width: 98%;
+      display: block;
+      font-size: 16px;
+      padding: 1%;
+      margin: 0;
+      vertical-align: top; }
+      @media only screen and (min-device-width: 769px) and (min-width: 769px) {
+        section.visible-grid div.wrapper article {
+          display: inline-block;
+          width: 75%;
+          vertical-align: top;
+          padding-left: 1%;
+          padding-right: 1%;
+          margin-right: -4px; } }
+      section.visible-grid div.wrapper article p {
+        color: #642832; }
+
+section.row-bg {
+  width: 100%;
+  *zoom: 1;
+  background-color: #006FFF; }
+  section.row-bg:before, section.row-bg:after {
+    content: '';
+    display: table; }
+  section.row-bg:after {
+    clear: both; }
+  section.row-bg div.wrapper {
+    width: 96%;
+    margin: 0 auto;
+    font-size: 16px; }
+    @media only screen and (min-device-width: 769px) and (min-width: 769px) {
+      section.row-bg div.wrapper {
+        width: 90%; } }
+    section.row-bg div.wrapper div.grid-demo {
+      width: 98%;
+      display: block;
+      font-size: 16px;
+      padding: 1%;
+      margin: 0;
+      vertical-align: top; }
+      @media only screen and (min-device-width: 769px) and (min-width: 769px) {
+        section.row-bg div.wrapper div.grid-demo {
+          display: inline-block;
+          width: 16.66667%;
+          vertical-align: top;
+          padding-left: 1%;
+          padding-right: 1%;
+          margin-right: -4px; } }
 
 /*# sourceMappingURL=main.css.map */
